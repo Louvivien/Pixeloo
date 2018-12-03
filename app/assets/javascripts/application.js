@@ -14,17 +14,3 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-
-//= require jquery/jquery.min
-//= require popper/popper.min
-//= require bootstrap/js/bootstrap.min
-//= require slidebar
-//= require classie
-
-//= require bootstrap-notify/bootstrap-growl.min
-//= require scrollpos-styler/scrollpos-styler
-
-//= require imagesloaded/imagesloaded.pkgd.min
-
-//= require boomerang.min

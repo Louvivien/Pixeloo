@@ -12,36 +12,10 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap/css/bootstrap.min
- *=	require swiper/css/swiper.min
- *=	require hamburgers/hamburgers.min
- *=	require animate/animate.min
- *=	require fancybox/css/jquery.fancybox.min
- *=	require boomerang.min
  */
 
-.form_container {
-	margin: 10% 10% 5% 10%;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
-.item-show-container {
-	margin: 15% 10% 15% 10%;
-}
-
-.item-img {
-	width: 350px;
-	height: 350px;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.background_color {
-	background-color: #bdbdbd;
-}
-
-.card {
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card:hover {
-	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+* {
+	font-family: 'Roboto', sans-serif;
 }
