@@ -72,3 +72,8 @@ gem 'stripe'
 
 gem "aws-sdk-s3", require: false
 
+gem 'toastr-rails'
+
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '~> 1.3'

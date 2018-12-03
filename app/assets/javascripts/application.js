@@ -21,6 +21,7 @@
 //= require bootstrap/js/bootstrap.min
 //= require slidebar
 //= require classie
+//= require toastr
 
 //= require bootstrap-notify/bootstrap-growl.min
 //= require scrollpos-styler/scrollpos-styler
