@@ -1,0 +1,38 @@
+<body class="background_color">
+    <div class="item-show-container">
+      <div class="row">
+        <div class="col-lg-6">
+          <p id="notice"><%= notice %></p>
+
+          <p>
+            <strong>Title:</strong><br>
+            <%= @item.title %>
+          </p>
+
+          <p>
+            <strong>Description:</strong><br>
+            <%= @item.description %>
+          </p>
+
+          <p>
+            <strong>Price:</strong><br>
+            <%= @item.price %> €
+          </p>
+
+          <br><br>
+
+          <% if user_signed_in? %>
+              <center><%= button_to "Ajouter au panier", line_items_path(item_id: @item), class: "btn btn-primary" %></center>
+          <% end %>
+        </div>
+
+
+        <div class="col-lg-6">
+          <% if @item.item_image.attached? %>
+          <%= image_tag(@item.item_image, :class => "item-img" ) %> </
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

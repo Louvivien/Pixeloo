@@ -1,0 +1,48 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark ">
+    <div class="container navbar-container">
+        <!-- Brand/Logo -->
+            <%= link_to "🐾 Amazing cat", root_path, :class => "navbar-brand" %>
+        
+        <div class="d-inline-block">
+            <!-- Navbar toggler  -->
+            <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+    <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
+    <!-- Navbar search - For small resolutions -->
+    <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
+        <form class="" role="form">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                <button class="btn btn-base-3" type="button">Go!</button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Navbar links -->
+    <ul class="navbar-nav">
+        <% if user_signed_in? %>
+            <li>        
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "nav-link" %>
+            </li>
+            <li>        
+                <%= link_to "Edit", edit_user_registration_path, :class => "nav-link" %>
+            </li>
+        <% else %>
+            <li>        
+                <%= link_to "Se connecter", new_user_session_path, :class => "nav-link" %>
+            </li>
+
+            <li>
+                <%= link_to "S'inscrire", new_user_registration_path, :class => "nav-link" %>
+            </li>
+        <% end %>
+    </ul>
+</nav>
