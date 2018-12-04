@@ -1,21 +1,32 @@
-main {
-	margin: 5% 0;
+footer {
+	margin: 5% 0 0 0;
+	padding: 5% 5%;
+	background: #e0e0e0;
+	background: -webkit-linear-gradient(to right, #fff, #e0e0e0);
+	background: linear-gradient(to right, #fff, #e0e0e0);
 }
 
-.title {
-	background: -webkit-linear-gradient(45deg, #FFB75E, #ED8F03);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-	font-size: 60px;
+.footer-titre {
+	color: #FFB75E;
 	font-weight: bold;
+	font-size: 24px;
 }
 
-.brand-description {
-	font-size: 40px;
-	margin: 1% 0 5% 0;
+.footer-text {
+	text-decoration: none;
+	color: black;
 }
 
-.main-search-bar {
+footer ul {
+	list-style: none;
+}
+
+.footer-text:hover {
+	text-decoration: none;
+	color: #FFB75E;
+}
+
+.newsletter-bar {
 	margin: 0 0 10% 0;
 	padding: 0 65px 0 20px;
 	transition: 0.2s;
@@ -27,15 +38,15 @@ main {
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
 }
 
-.main-search-bar:hover {
+.newsletter-bar:hover {
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
 }
 
-.main-search-bar:focus {
+.newsletter-bar:focus {
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
 }
 
-.search-bar-submit {
+.newsletter-submit {
 	position: relative;
 	right: 55px;
 	bottom: 3px;
@@ -49,12 +60,6 @@ main {
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
 }
 
-.search-bar-submit:active {
+.newsletter-submit:active {
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
-}
-
-.main-img {
-	margin: 0 0 10% 0;
-	border-radius: 78% 22% 40% 60% / 40% 22% 78% 60%;
-	box-shadow: 0 20px 30px 0 rgba(0,0,0,0.2);
 }

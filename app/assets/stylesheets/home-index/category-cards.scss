@@ -5,10 +5,11 @@
 }
 
 .content-2 {
-	margin: 5% 5% 0 10%;
+	margin: 5% 5% 0 12%;
 }
 
 .category-card-container {
+	margin: 0 0 7% 0;
 	transition: all 0.3s;
 	width: 340px;
 	height: 180px;
@@ -25,20 +26,21 @@
 	transform: translateY(-10px);
 }
 
+.category-card-circle {
+	position: relative;
+	bottom: 77px;
+	left: 91px;
+	width: 240px;
+	height: 180px;
+	background: #fff;
+	border-radius: 40% 4.5% 4.5% 40% / 50% 4.5% 4.5% 50%;
+}
+
 .category-card-title {
 	color: #fff;
-	text-align: center;
 	font-size: 22px;
 	font-weight: bold;
 	line-height: 22px;
 	padding: 5% 2%;
 }
 
-.card-description {
-	text-align: center;
-	color: #c4cfd7;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 22px;
-	padding: 0 12px;
-}
