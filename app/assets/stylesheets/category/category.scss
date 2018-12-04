@@ -1,0 +1,51 @@
+.category-title {
+	margin: 5% 0;
+	font-size: 55px;
+}
+
+.brand-btn {
+	margin: 1% 3%;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: #FFF;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	padding: 7px 30px 7px 30px;
+	border-radius: 30px;
+	height: 30px;
+	width: 110px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+	opacity: 1;
+	transition-duration: 0.2s;
+}
+
+.brand-btn:hover {
+	text-decoration: none;
+	color: #FFF;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.16),0 4px 6px rgba(0,0,0,0.23);
+    opacity: 0.8;
+}
+
+.item-img {
+	transition: 0.3s;
+	width: 300px;
+	height: 180px;
+	border-radius: 14px;
+}
+
+.item-img:hover {
+	box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.item-title {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.item-price {
+	font-weight: bold;
+	font-size: 24px;
+	color: #FFB75E;
+}
