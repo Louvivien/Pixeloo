@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  
-get '/admin/user/*/edit', to: 'devise/registrations#edit' 
+ get '/admin/user/*/edit', to: 'devise/registrations#edit' 
+  get 'category/create'
+  get 'category/destroy'
+  get 'category/edit'
+  get 'category/show'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :orders
   resources :line_items
