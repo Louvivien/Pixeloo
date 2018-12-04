@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+get '/admin/user/*/edit', to: 'devise/registrations#edit' 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :orders
   resources :line_items

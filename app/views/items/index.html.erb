@@ -1,6 +1,13 @@
+<% if current_user.superadmin_role? %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Items</h1>
+
+
+ 
+
+
 
 <table>
   <thead>
@@ -31,3 +38,7 @@
 <br>
 
 <%= link_to 'New Item', new_item_path %>
+
+
+
+<% end %>

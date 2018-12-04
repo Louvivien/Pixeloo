@@ -1,3 +1,5 @@
+<% if current_user.superadmin_role? %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Orders</h1>
@@ -33,3 +35,6 @@
 <br>
 
 <%= link_to 'New Order', new_order_path %>
+
+<% end %>
+
