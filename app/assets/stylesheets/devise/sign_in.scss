@@ -1,60 +1,46 @@
-.category-title {
-	margin: 5% 0;
+.devise-title {
 	font-size: 55px;
+	font-weight: bold;
 }
 
-.brand-btn {
-	margin: 0 3% 0 0;
+.text-form {
+	margin: 0 0 15% 0;
+}
+
+.form-container {
+	margin: 8% 7% 0 7%;
+}
+
+.devise-btn {
+	margin: 0 0 10% 0;
+	border: none;
 	text-decoration: none;
 	text-align: center;
 	font-weight: bold;
+	font-size: 28px; 
 	color: #FFF;
 	background: #FFB75E;
 	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
 	background: linear-gradient(to left, #ED8F03, #FFB75E);
 	padding: 7px 30px 7px 30px;
 	border-radius: 30px;
-	height: 30px;
-	width: 110px;
+	height: 60px;
+	width: 220px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 	opacity: 1;
 	transition-duration: 0.2s;
 }
 
-.brand-btn:hover {
+.devise-btn:hover {
 	text-decoration: none;
 	color: #FFF;
     box-shadow: 0 4px 6px rgba(0,0,0,0.16),0 4px 6px rgba(0,0,0,0.23);
     opacity: 0.8;
 }
 
-.category-item {
-	margin: 5% 0 0 0;
-}
-
-.item-card-container {
-	margin: 10% 0 0 0; 
-}
-
-
-.item-img {
-	transition: 0.3s;
-	width: 300px;
-	height: 180px;
-	border-radius: 14px;
-}
-
-.item-img:hover {
-	box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
-}
-
-.item-title {
-	font-weight: bold;
-	font-size: 24px;
-}
-
-.item-price {
-	font-weight: bold;
-	font-size: 24px;
-	color: #FFB75E;
+.devise-btn:active {
+	text-decoration: none;
+	color: #FFF;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+	opacity: 1;
 }
