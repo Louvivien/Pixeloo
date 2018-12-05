@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  get '/admin/user/*/edit', to: 'devise/registrations#edit' 
 
+  get "/category/shoW", to: "category#show", as: "category"
   get 'category/create'
   get 'category/destroy'
   get 'category/edit'
