@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  get '/admin/user/*/edit', to: 'devise/registrations#edit' 
+
   get 'category/create'
   get 'category/destroy'
   get 'category/edit'
@@ -11,6 +12,10 @@ Rails.application.routes.draw do
   root 'home#index'
   devise_for :users
   resources :items
+ 
+  put '/statusupdate', to: 'order_validations#update'
+  resources :order_validations
   resources :charges, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
