@@ -1,38 +1,36 @@
-<body class="background_color">
-    <div class="item-show-container">
-      <div class="row">
+<div class="item-show-container-1">
+    <div class="row">
         <div class="col-lg-6">
-          <p id="notice"><%= notice %></p>
-
-          <p>
-            <strong>Title:</strong><br>
-            <%= @item.title %>
-          </p>
-
-          <p>
-            <strong>Description:</strong><br>
-            <%= @item.description %>
-          </p>
-
-          <p>
-            <strong>Price:</strong><br>
-            <%= @item.price %> €
-          </p>
-
-          <br><br>
-
-          <% if user_signed_in? %>
-              <center><%= button_to "Ajouter au panier", line_items_path(item_id: @item), class: "btn btn-primary" %></center>
-          <% end %>
+            <p class="item-show-title">Nikon 500D</p>
+            <p class="item-show-price">250 € / jour</p>
+            <p class="item-show-description">Est frui nunc erat igitur tempore hos in se cum.</p>
+            <br><br>
+            <a href="#" class="item-show-panier-btn">Ajouter au panier</a>
+            <br>
         </div>
-
-
-        <div class="col-lg-6">
-          <% if @item.item_image.attached? %>
-          <%= image_tag(@item.item_image, :class => "item-img" ) %>
-          <% end %>
+        <div align="center" class="col-lg-6">
+            <%= image_tag("item_img.jpg", :alt => "item" , :class => "img-fluid item-show-img")%>
         </div>
-      </div>
     </div>
-  </div>
-</body>
+</div>
+
+<div class="item-show-container-2">
+    <p class="item-show-title-2">Détails</p>
+    <p>Batnae municipium in Anthemusia conditum Macedonum manu priscorum ab Euphrate flumine brevi spatio disparatur, refertum mercatoribus opulentis, ubi annua sollemnitate prope Septembris initium mensis ad nundinas magna promiscuae fortunae convenit multitudo ad commercanda quae Indi mittunt et Seres aliaque plurima vehi terra marique consueta.</p>
+</div>
+
+<div class="item-show-container-3">
+    <p class="item-show-title-2">Infos loueur</p>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="owner-card-container">
+                <%= image_tag("xavier-niel.jpg", :alt => "item" , :class => "img-fluid owner-card-img")%>
+                <p class="owner-card-name">Xavier</p>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <p>Bonjour je m'appelle Xavier,<br><br>
+            Batnae municipium in Anthemusia conditum Macedonum manu priscorum ab Euphrate flumine brevi spatio disparatur, refertum mercatoribus opulentis, ubi annua sollemnitate prope Septembris initium mensis ad nundinas magna promiscuae fortunae convenit multitudo ad commercanda quae Indi mittunt et Seres aliaque plurima vehi terra marique consueta.</p>
+        </div>
+    </div>
+</div>

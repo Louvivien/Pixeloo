@@ -1,0 +1,79 @@
+.item-show-container-1 {
+	margin: 5% 0 0 0; 
+}
+
+.item-show-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.item-show-price {
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFB75E;
+}
+
+.item-show-description {
+	font-size: 22px;
+}
+
+.item-show-panier-btn {
+	text-align: center; 
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2% 4%;
+	color: black;
+	border: 2px solid #FFB75E;
+	border-radius: 50px
+}
+
+.item-show-panier-btn:hover {
+	text-decoration: none;
+	background: #eeeeee; 
+	color: black;
+
+}
+
+.item-show-panier-btn:active {
+	background: #fff; 
+}
+
+.item-show-img {
+	box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+	border: 10px solid #fff;
+	width: 500px;
+	height: 300px;
+}
+
+.item-show-container-2 {
+	margin: 7% 30% 0 0;
+}
+
+.item-show-title-2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.item-show-container-3 {
+	margin: 7% 0 0 0;
+}
+
+.owner-card-container {
+	margin: 0 0 10% 0;
+	width: 250px;
+	height: 310px;
+	border-radius: 6px;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.owner-card-img {
+	border-radius: 6px 6px 0 0 ;
+}
+
+.owner-card-name {
+	position: relative;
+	top: 16px;
+	text-align: center;
+	font-size: 18px;
+}
