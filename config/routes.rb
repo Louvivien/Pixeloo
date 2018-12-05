@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'category/create'
-  get 'category/destroy'
-  get 'category/edit'
-  get 'category/show'
+  get '/categories/show', to: 'categories#show'
   resources :orders
   resources :line_items
   resources :carts
