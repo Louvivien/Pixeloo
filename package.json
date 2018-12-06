@@ -1,7 +1,9 @@
 {
   "name": "pixeloo",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
     "webpack": "^4.27.1",
     "webpack-dev-server": "^3.1.10"
