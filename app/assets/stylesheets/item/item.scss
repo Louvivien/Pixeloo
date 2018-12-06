@@ -24,6 +24,8 @@
 	font-weight: bold;
 	padding: 2% 4%;
 	color: black;
+	background: #fff;
+	cursor: pointer;
 	border: 2px solid #FFB75E;
 	border-radius: 50px
 }
@@ -36,7 +38,7 @@
 }
 
 .item-show-panier-btn:active {
-	background: #fff; 
+	background: #fff;
 }
 
 .item-show-img {

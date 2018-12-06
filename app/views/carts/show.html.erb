@@ -1,26 +1,32 @@
 <body class="background_color">
     <div class="item-show-container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>Panier</h2>
-          <ul>
+        <p class="panier-title">Mon panier</p>
+
+        <div class="row">
             <% @cart.line_items.each do |element| %>
-              <li><%= element.item.title %> (X <%= element.quantity %>) <span class="badge badge-info"><%= number_to_currency(element.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
-          </li>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="card-panier-container">
+                        <div class="card-panier-item-title">
+                            <%= element.item.title %>
+                        </div>
+                        <div class="card-panier-item-img">
+                                <%= image_tag("item_img.jpg", :alt => "item" , :class => "img-fluid")%>
+                        </div>
+                        <div class="card-panier-item-price">
+                            <%= number_to_currency(element.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
+                        </div>
+                            <%= button_to "Commander", new_order_path, method: :get, class: "card-panier-btn" %>
+                    </div>
+                </div>
             <% end %>
-          </ul>
-
-          <p class="font-weight-bold">Total : <span class="badge badge-info"><%= number_to_currency(@cart.total, unit: "€ / jour", separator: ",", format: "%n %u") %></span></p>
-          <br><br>
-
-          <%= link_to "Retour aux produits", root_path, class: "btn btn-primary" %>
         </div>
 
-        <div class="col-lg-6">
-            <%= button_to "Confirmer commande", new_order_path, method: :get, class: "btn btn-primary" %><br><br>
-            <%= button_to "Vider le panier", @cart, method: :delete, data: {
-              confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
-        </div>
+          <p class="panier-total">
+            Total : <%= number_to_currency(@cart.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
+          </p>
+
+          <%= button_to "Vider le panier", @cart, method: :delete, data: {
+              confirm: "Êtes-vous sûr ?" }, class: "delete-btn" %>
       </div>
   </div>
 </body>

@@ -10,11 +10,11 @@
         </div>
         <div align="center" class="col-lg-6">
             
-            <% if @item.item_image.attached? %>
-          <%= image_tag(@item.item_image, :class => "img-fluid item-show-img" ) %> 
-          <% else  %> 
+        <% if @item.item_image.attached? %>
+            <%= image_tag(@item.item_image, :class => "img-fluid item-show-img" ) %> 
+        <% else  %> 
             <%= image_tag("item_img.jpg", :alt => "item" , :class => "img-fluid item-show-img")%>
-          <% end %>
+        <% end %>
 
 
 
