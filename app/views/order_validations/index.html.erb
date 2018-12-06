@@ -1,0 +1,38 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Voici l'état de vos commandes</h1>
+
+
+<p>Ici vous pouvez voir vos demandes de location et les suivre facilement</p>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Commande</th>
+      <th>Status de votre commande</th>
+      <th>Panier</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= order.status %></td>
+        <td><%= order.cart %></td>
+        <td><%= link_to 'Voir la demande', edit_order_validation_path(order), :method => :get %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+

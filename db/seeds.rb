@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
 a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postulatus vel hoc rumore multatione aut multatione beluae honoratorum fovisse suos modum bonorum catenarum rumore militarium aut insimulatus enim iniecto iniecto."
 
 @items = Item.create!(title: "canon eos-5d", description: a, price: "40€",image_url: "canon-eos-5d.jpg")
@@ -45,3 +46,4 @@ a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postula
 @items = Item.create!(title: "nikon76683351",description: a, price: "15€",image_url:  "nikon76683351.png")
 @items = Item.create!(title: "nikon1188724895", description: a, price: "2€",image_url: "nikon1188724895.png" )
 @items = Item.create!(title: "nikon-speedlight-sb5000", description: a, price: "25€",image_url:  "nikon-speedlight-sb5000.png")
+

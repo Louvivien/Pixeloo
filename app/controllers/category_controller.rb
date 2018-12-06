@@ -1,4 +1,6 @@
 class CategoryController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index]
+
   def create
   end
 
@@ -9,8 +11,9 @@ class CategoryController < ApplicationController
   end
 
   def show
-  	  
-        
+
+  @items = Item.all.order(:id)
+
   end
     private
     # Use callbacks to share common setup or constraints between actions.
