@@ -28,9 +28,9 @@ Image.create(
 
 
 ###########  Seed Users: Un admin , un Owner, un customer, un visiteur
-
+=begin
 # un Owner
-#=begin
+
 User.create!([ {
   email: "bar@foo.fr",
   postal_code: "92500",
@@ -76,7 +76,7 @@ User.create!([ {
 
     # simple User: visiteur
   User.create!([ {
-    email: "bar@foo.fr",
+    email: "barbar@footer.fr",
     postal_code: "92500",
     username: "visiteur",
     user_type: "", #can have two values: owner or customer
@@ -87,19 +87,35 @@ User.create!([ {
     password: "azerty"
 }
   ]  )
+
 ############ Seed des Items
 
 Item.create!(
   title: "Nikon d300", 
   description: "Boitier reflex Aps-c", 
   price: "15",
-  user_id: "1",
+  user_id: "4",
   category_id: "1",
   image_url: "app/assets/images/boitiers/boitier-nikon-d300s.jpg"
   )
+=end
+  Item.create!(
+    title: "Canon eos650", 
+    description: "Boitier reflex Aps-c", 
+    price: "20",
+    user_id: "4",
+    category_id: "1",
+    image_url: "app/assets/images/boitiers/boitier-canon-eos-650.jpg"
+    )
 
+    Item.create!(
+      title: "Nikon 85mm", 
+      description: "Objectif lumineux 85mm f1.8", 
+      price: "25",
+      user_id: "4",
+      category_id: "2",
+      image_url: "app/assets/images/objectifs/objectif-nikon-nikkor-afs-85mm-f18-g.jpg"
+      )
 
-
- # =end
 ########### Seed Categories
 #todo: creation model
