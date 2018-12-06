@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   
   has_one_attached :item_image
   has_and_belongs_to_many :orders
-
+  has_many :images
   validates :title, presence: {
     message: "Le titre doit être renseigné."
   }
