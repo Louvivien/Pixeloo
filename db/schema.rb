@@ -107,6 +107,8 @@ ActiveRecord::Schema.define(version: 2018_12_06_133720) do
     t.text "about"
     t.string "img_cin_url"
     t.string "user_type"
+    t.string "address"
+    t.integer "postal_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
