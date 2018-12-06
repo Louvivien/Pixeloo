@@ -10,6 +10,7 @@ module Pixeloo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
 
+    config/application.rb config.assets.initialize_on_precompile = false
     config.load_defaults 5.2
 
     
