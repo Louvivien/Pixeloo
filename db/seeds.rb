@@ -31,29 +31,32 @@ Image.create(
   img_url: "app/assets/images/boitiers/boitier-nikon-d300s.jpg"
   item_id: "1"
 )
-
+=end
 ############ Seed des Items
 
 Item.create!(
   title: "Nikon d300", 
   description: "Boitier reflex Aps-c", 
   price: "15",
-  user_id: "1",
-  category_id: "1"
+  user_id: "1"
+  #category_id: "1"
   )
-=end
+
 
 ###########  Seed Users
+=begin
 User.create!([ {
   email: "bar@foo.fr",
   postal_code: "92500",
+  username: "rado",
   user_type: "owner", #can have two values: owner or customer
   first_name: "Rado",
   last_name: "Rakoto",
   about: "amateur photo depuis quelques années, je vous propose mon matériel à la location",
-  img_cin_url: ""
+  img_cin_url: "",
+  password: "azerty"
 }
   ]  )
-
+=end
 ########### Seed Categories
 #todo: creation model
