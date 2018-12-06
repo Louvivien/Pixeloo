@@ -1,0 +1,60 @@
+main {
+	margin: 5% 0;
+}
+
+.title {
+	background: -webkit-linear-gradient(45deg, #FFB75E, #ED8F03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.brand-description {
+	font-size: 40px;
+	margin: 1% 0 5% 0;
+}
+
+.main-search-bar {
+	margin: 0 0 10% 0;
+	padding: 0 65px 0 20px;
+	transition: 0.2s;
+	height: 50px;
+	width: 300px;
+	font-size: 24px;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
+
+.main-search-bar:hover {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+.main-search-bar:focus {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+.search-bar-submit {
+	position: relative;
+	right: 55px;
+	bottom: 3px;
+	height: 40px;
+	width: 40px;
+	border: none;
+	border-radius: 50px;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
+}
+
+.search-bar-submit:active {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
+
+.main-img {
+	margin: 0 0 10% 0;
+	border-radius: 78% 22% 40% 60% / 40% 22% 78% 60%;
+	box-shadow: 0 20px 30px 0 rgba(0,0,0,0.2);
+}

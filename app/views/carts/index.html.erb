@@ -1,3 +1,9 @@
+
+
+<% if current_user.superadmin_role? %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Carts</h1>
@@ -23,3 +29,5 @@
 <br>
 
 <%= link_to 'New Cart', new_cart_path %>
+
+<% end %>
