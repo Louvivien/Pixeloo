@@ -66,17 +66,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'faker'
 
-
 gem 'dotenv-rails'
 gem 'stripe'
-
 gem "aws-sdk-s3", require: false
-
 gem 'toastr-rails'
-
 
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '~> 1.3'
-
 gem 'cancancan'
-
