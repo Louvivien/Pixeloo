@@ -12,6 +12,20 @@
   <% end %>
 
 
+
+
+<p> A partir de quand souhaitez vous louer les produits ? </p>
+
+<p> ********* </p>
+
+
+<p> Décrivez votre projet </p>
+
+<p> ********* </p>
+
+
+
+
 <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control" %>
@@ -28,7 +42,20 @@
     <%= form.text_field :email, class: "form-control" %>
   </div>
 
+
+<p> Récapitulatif de votre commande : </p>
+
+<p> ********* </p>
+
+<br><br>
+
+
+
+
   <div class="actions">
     <%= form.submit "Valider", class: "btn btn-success" %>
   </div>
+
+
+
 <% end %>
