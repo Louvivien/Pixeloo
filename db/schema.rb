@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_12_06_131209) do
+=======
+ActiveRecord::Schema.define(version: 2018_12_06_133720) do
+>>>>>>> modelItem
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,10 +57,10 @@ ActiveRecord::Schema.define(version: 2018_12_06_131209) do
     t.string "title"
     t.text "description"
     t.decimal "price"
-    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.integer "category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
