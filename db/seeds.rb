@@ -11,5 +11,5 @@ require 'faker'
 
 20.times do |item|
   items = Item.create!(title: Faker::Cat.name, description: Faker::Lorem.paragraph, price: Faker::Commerce.price ,image_url: Faker::Avatar.image)
-  items.item_image.attach(io: File.open('app/assets/images/cat.png'), filename: 'cat.png', content_type: 'image/png')
+  items.item_image.attach(io: File.open('app/assets/images/item_img.jpg'), filename: 'item_img.jpg', content_type: 'image/jpg')
 end

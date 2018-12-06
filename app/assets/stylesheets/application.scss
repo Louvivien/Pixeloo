@@ -20,3 +20,13 @@
 * {
 	font-family: 'Roboto', sans-serif;
 }
+
+::-moz-selection {
+    background: #FFB75E;
+    color: #fff;
+}
+
+::selection {
+    background: #FFB75E;
+    color: #fff;
+}
