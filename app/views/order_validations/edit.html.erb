@@ -1,10 +1,12 @@
-<h1>Détail de la demande de location</h1>
+<div class="form-container">
+	<p class="devise-title">Détail de la demande de location</p>
 
 
-<p>Ici vous pouvez examiner votre demande de location et suivre son avancement</p>
+	<p>Ici vous pouvez examiner votre demande de location et suivre son avancement</p>
 
 
-<%= render 'form', order: @order %>
+	<%= render 'form', order: @order %>
 
-<%= link_to 'Show', @order_validation %> |
-<%= link_to 'Back', order_validations_path %>
+	<%= link_to 'Show', @order_validation %> |
+	<%= link_to 'Back', order_validations_path %>
+</div>
