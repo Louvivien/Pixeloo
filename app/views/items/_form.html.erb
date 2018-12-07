@@ -12,33 +12,40 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="form-group">
+          <%= form.text_field :title, :placeholder => "Titre", :class => "form-control" %>
+      </div>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+      <div class="form-group">
+          <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
+      </div>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+      <div class="form-group">
+          <%= form.text_field :price, :placeholder => "Prix", :class => "form-control" %>
+      </div>
   </div>
 
   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+      <div class="form-group">
+          <%= form.text_field :image_url, :placeholder => "Image url", :class => "form-control" %>
+      </div>
   </div>
 
+  <br>
 
   <div class="field">
-    <%= form.label :item_image %>
-    <%= form.file_field :item_image %>
+      <%= form.label :Ajouter_une_image, :class => "item-new-image-label" %><br>
+      <%= form.file_field :item_image %>
   </div>
 
+  <br>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <center>
+      <%= form.submit :class => "item-new-btn" %>
+  </center>
+
 <% end %>
