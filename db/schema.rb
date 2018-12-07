@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_12_03_155054) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,12 +41,6 @@ ActiveRecord::Schema.define(version: 2018_12_03_155054) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -60,7 +53,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_155054) do
   create_table "line_items", force: :cascade do |t|
     t.bigint "cart_id"
     t.bigint "item_id"
-    t.integer "quantity", default: 1
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
