@@ -9,7 +9,14 @@ class OrderValidationsController < ApplicationController
   # GET /orders.json
   def index
     order_validation = ""
+
+    if current_user.superadmin_role? 
     @orders = Order.all.order(:id)
+      else
+    @orders = Order.where("user_id = ?", current_user)
+    end
+
+
   end
   
 
