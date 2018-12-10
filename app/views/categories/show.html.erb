@@ -5,67 +5,25 @@
     <a href="#" class="brand-btn">Canon</a>
     <a href="#" class="brand-btn">Panasonic</a>
 <hr>
-<div class="category-item">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>
-                </a>    
-                <div class="item-title">Nikon 500D</div>
-                <div class="item-price">250 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
-            </div> 
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>
-                </a>
-                <div class="item-title">Leica 500D</div>
-                <div class="item-price">280 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
+<center>
+    <div class="category-item">
+        <div class="row">
+            <% @items.each do |item| %> 
+            <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="item-card-container">
+                    <% if item.item_image.attached? %>
+                            <%= link_to image_tag(item.item_image, width: "50", :alt => "pixeloo" , :class => "img-fluid item-img"),item %>
+                    <% end %>
+                    <div class="item-title"><%= link_to item.title,item %>
+                    </div>
+                    <div class="item-price"><%= number_to_currency item.price, unit: '€ / jour', separator: ',', format: '%n %u' %>         
+                    </div>
+                    <% if user_signed_in? %>
+                              <center><%= button_to "Ajouter au panier" ,line_items_path(item_id: item), class: "panier-btn" %></center>
+                    <% end %>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>   
-                </a>
-                <div class="item-title">Canon 500D</div>
-                <div class="item-price">190 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>   
-                </a>
-                <div class="item-title">Nikon 500D</div>
-                <div class="item-price">250 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
-            </div> 
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>   
-                </a>
-                <div class="item-title">Leica 500D</div>
-                <div class="item-price">280 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-card-container">
-                <a href="../items/show">
-                    <%= image_tag("item_img.jpg", :alt => "pixeloo" , :class => "img-fluid item-img")%>   
-                </a>
-                <div class="item-title">Canon 500D</div>
-                <div class="item-price">190 € / jour</div><br>
-                <a href="/carts/1" class="panier-btn">Ajouter au panier</a>
-            </div>
+        <% end %>
         </div>
     </div>
-</div>
+</center>
