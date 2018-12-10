@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   get '/admin/user/*/edit', to: 'devise/registrations#edit' 
-  get "/category/shoW", to: "category#show", as: "category"
-  get 'category/create'
-  get 'category/destroy'
-  get 'category/edit'
-  get 'category/show'
+  get "/categories/shoW", to: "categories#show", as: "categories"
+  get 'categories/create'
+  get 'categories/destroy'
+  get 'categories/edit'
+  get 'categories/show'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get '/categories/show', to: 'categories#show'
   resources :orders
   resources :line_items
   resources :carts
