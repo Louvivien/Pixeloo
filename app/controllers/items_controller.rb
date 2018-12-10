@@ -7,7 +7,13 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+
+    if current_user.superadmin_role? 
     @items = Item.all.order(:id)
+      else
+    @items = Item.where("user_id = ?", current_user)
+    end
+
   end
 
 
