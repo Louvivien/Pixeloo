@@ -5,7 +5,9 @@
         <h1 class="brand-description">Une plateforme de location de matériel photo</h1>
         <form>
             <input class="main-search-bar" type="text" placeholder="Que recherches-tu ?">
-            <button class="search-bar-submit" type="submit">🖐</button>
+            <button class="search-bar-submit" type="submit">
+                <%= image_tag("search.png")%>
+            </button>
         </form>
         </div>
         <div align="center" class="col-lg-6">
@@ -18,23 +20,26 @@
     <div class="row">
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Rapide</div>
-                <div class="presentation-card-description">Hi et Olybrium suam Chilo.</div>
+                <div class="presentation-card-avatar">
+                    <%= image_tag("commu.png", :class => "presention-logo")%>
+                </div>
+                <div class="presentation-card-description">Une communauté d'échange basée sur la confiance et le respect entre utilisateur.</div>
             </div> 
         </div>
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Efficace</div>
-                <div class="presentation-card-description">Pacuvii patrius se quis cum.</div>
+                <div class="presentation-card-avatar">
+                    <%= image_tag("photo.png", :class => "presention-logo")%>
+                </div>
+                <div class="presentation-card-description">Pour les passionnés de photographie souhaitant se faire un avis et tester un produit avant de l'acheter.</div>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Pas cher</div>
-                <div class="presentation-card-description">Se tramitibus intactam timore praesidiis.</div>
+                <div class="presentation-card-avatar">
+                    <%= image_tag("prox.png", :class => "presention-logo")%>
+                </div>
+                <div class="presentation-card-description">Où que tu sois tu trouvera ton bonheur.</div>
             </div>
         </div>
     </div>
@@ -46,7 +51,7 @@
         <div class="col-lg-6 col-md-6 col-xs-12">
             <a href="/category/show">
                 <div class="category-card-container">
-                    <div class="category-card-title"><%= link_to "BOITIERS", category_path %>
+                    <div class="category-card-title"><%= link_to "BOITIERS REFLEX", category_path %>
 </div>
                     <div class="category-card-circle"></div>
                 </div>
