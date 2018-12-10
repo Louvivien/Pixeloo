@@ -24,6 +24,8 @@
 	font-weight: bold;
 	padding: 2% 4%;
 	color: black;
+	background: #fff;
+	cursor: pointer;
 	border: 2px solid #FFB75E;
 	border-radius: 50px
 }
@@ -36,7 +38,7 @@
 }
 
 .item-show-panier-btn:active {
-	background: #fff; 
+	background: #fff;
 }
 
 .item-show-img {
@@ -76,4 +78,32 @@
 	top: 16px;
 	text-align: center;
 	font-size: 18px;
+}
+
+.item-new-image-label {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-new-btn {
+	margin: 0 0 50px 0;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2% 4%;
+	color: black;
+	background: #fff;
+	cursor: pointer;
+	border: 2px solid #FFB75E;
+	border-radius: 50px
+}
+
+.item-new-btn:hover {
+	text-decoration: none;
+	background: #eeeeee; 
+	color: black;
+
+}
+
+.item-new-btn:active {
+	background: #fff;
 }
