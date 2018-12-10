@@ -1,7 +1,12 @@
 class Item < ApplicationRecord
 	
   has_many :line_items, dependent: :nullify
-  belongs_to :user
+
+  belongs_to :owner, class_name: 'User'
+  has_many :orders
+  has_many :customers, class_name: 'User', through: :orders
+
+
 
 
   has_one_attached :item_image

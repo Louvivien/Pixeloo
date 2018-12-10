@@ -30,6 +30,9 @@ class LineItemsController < ApplicationController
 
     item = Item.find(params[:item_id])
     @line_item = @cart.add_item(item)
+    @line_item.user_id = Item.find(params[:item_id]).owner_id
+
+
 
     respond_to do |format|
       if @line_item.save

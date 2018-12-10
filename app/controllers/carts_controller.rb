@@ -28,6 +28,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
   # POST /carts.json
   def create
     @cart = Cart.new(cart_params)
+    
 
     respond_to do |format|
       if @cart.save
