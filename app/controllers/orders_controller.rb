@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_cart, only: [:new, :create]
   before_action :redirect_if_cart_is_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_owner, only: [:new,:show, :edit, :update, :destroy]
+  before_action :set_customer, only: [:new,:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
@@ -19,6 +20,9 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @order.user_id = current_user.id
+    @order.owner_id = @cartowner_id
+
   end
 
   # GET /orders/1/edit
@@ -31,7 +35,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
       @order.cart = @cart
       @order.user = current_user
-
+      @order.owner_id = @cartowner_id
 
 
     respond_to do |format|
