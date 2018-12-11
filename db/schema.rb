@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_131059) do
   create_table "line_items", force: :cascade do |t|
     t.bigint "cart_id"
     t.bigint "item_id"
-    t.integer "quantity", default: 1
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
@@ -91,6 +91,12 @@ ActiveRecord::Schema.define(version: 2018_12_10_131059) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.integer "type"
+    t.string "first_name"
+    t.string "last_name"
+    t.text "about"
+    t.string "img_cin_url"
     t.boolean "superadmin_role", default: false
     t.boolean "user_role", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
