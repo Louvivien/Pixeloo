@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_12_11_104545) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +42,13 @@ ActiveRecord::Schema.define(version: 2018_12_11_104545) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -49,6 +57,7 @@ ActiveRecord::Schema.define(version: 2018_12_11_104545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.integer "category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -84,6 +93,12 @@ ActiveRecord::Schema.define(version: 2018_12_11_104545) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.integer "type"
+    t.string "first_name"
+    t.string "last_name"
+    t.text "about"
+    t.string "img_cin_url"
     t.boolean "superadmin_role", default: false
     t.boolean "user_role", default: true
     t.index ["email"], name: "index_users_on_email", unique: true

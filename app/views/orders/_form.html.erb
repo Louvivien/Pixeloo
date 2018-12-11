@@ -20,28 +20,28 @@
 <br><br>
 
 
-<p class="item-new-image-label">Décrivez votre projet</p>
-  <div class="field">
-      <div class="form-group">
-          <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
-      </div>
-  </div>
+<div class="row">
+    <div class="col-lg-6">
+        <p class="item-new-image-label">Décrivez votre projet</p>
+        <div class="field">
+            <div class="form-group">
+                <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
+            </div>
+        </div>
+    </div>
 
-
-<div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control" %>
-</div>
-
-
-<div class="form-group">
-    <%= form.label :address %>
-    <%= form.text_field :address, class: "form-control" %>
-</div>
-
-<div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
+    <div class="col-lg-6">
+        <p class="item-new-image-label">Vos coordonnées</p>
+        <div class="form-group">
+            <%= form.text_field :name, class: "form-control", :placeholder => "Nom" %>
+        </div>
+        <div class="form-group">
+            <%= form.text_field :address, class: "form-control", :placeholder => "Adresse" %>
+        </div>
+        <div class="form-group">
+            <%= form.email_field :email, class: "form-control", :placeholder => "Email" %>
+        </div>
+    </div>
 </div>
 
 <br><br>
@@ -64,8 +64,10 @@
 
 <br><br>
 
-  <div class="actions">
-    <%= form.submit "Valider", class: "btn btn-success" %>
-  </div>
+<center>
+    <div class="actions">
+        <%= form.submit "Valider", class: "btn-valider" %>
+    </div>
+</center>
 
 <% end %>

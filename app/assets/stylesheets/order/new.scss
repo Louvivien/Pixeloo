@@ -1,0 +1,25 @@
+textarea.form-control {
+    min-height: 146px !important;
+}
+
+.btn-valider {
+	font-size: 20px;
+	border: none;
+	margin: 0 3% 0 0;
+	font-weight: bold;
+	color: #FFF;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+	background: linear-gradient(to right, #ED8F03, #FFB75E);
+	border-radius: 6px;
+	height: 60px;
+	width: 240px;
+	transition-duration: 0.3s;
+}
+
+.btn-valider:hover {
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	cursor: pointer;
+}

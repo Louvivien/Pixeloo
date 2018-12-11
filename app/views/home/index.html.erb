@@ -2,10 +2,12 @@
     <div class="row">
         <div class="col-lg-6">
         <p class="title">PIXELOO</p>
-        <h1 class="brand-description">Une plateforme de location de matériel photo</h1>
+        <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
         <form>
             <input class="main-search-bar" type="text" placeholder="Que recherches-tu ?">
-            <button class="search-bar-submit" type="submit">🖐</button>
+            <button class="search-bar-submit" type="submit">
+                <%= image_tag("search.png")%>
+            </button>
         </form>
         </div>
         <div align="center" class="col-lg-6">
@@ -14,59 +16,70 @@
     </div>
 </main>
 
-<div class="content-1">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Rapide</div>
-                <div class="presentation-card-description">Hi et Olybrium suam Chilo.</div>
-            </div> 
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Efficace</div>
-                <div class="presentation-card-description">Pacuvii patrius se quis cum.</div>
+<center>
+    <div class="content-1">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="presentation-card-container">
+                    <div class="presentation-card-avatar">
+                        <%= image_tag("commu.png", :class => "presention-logo")%>
+                    </div>
+                    <div class="presentation-card-description">Une communauté d'échange basée sur la confiance et le respect entre utilisateur.</div>
+                </div> 
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="presentation-card-container">
-                <div class="presentation-card-avatar"></div>
-                <div class="presentation-card-title">Pas cher</div>
-                <div class="presentation-card-description">Se tramitibus intactam timore praesidiis.</div>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="presentation-card-container">
+                    <div class="presentation-card-avatar">
+                        <%= image_tag("photo.png", :class => "presention-logo")%>
+                    </div>
+                    <div class="presentation-card-description">Pour les passionnés de photographie souhaitant se faire un avis et tester un produit avant de l'acheter.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="presentation-card-container">
+                    <div class="presentation-card-avatar">
+                        <%= image_tag("prox.png", :class => "presention-logo")%>
+                    </div>
+                    <div class="presentation-card-description">Où que tu sois tu trouvera ton bonheur.</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<p class="index-category-title">Categories</p>
+    
+    <p class="index-category-title">Categories</p>
 
-<div class="content-2">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-xs-12">
-            <a href="/category/show">
-                <div class="category-card-container">
-                    <div class="category-card-title"><%= link_to "BOITIERS", category_path %>
-</div>
-                    <div class="category-card-circle"></div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-6 col-md-6 col-xs-12">
-            <a href="/">
-                <div class="category-card-container">
-                    <div class="category-card-title"><%= link_to "OBJECTIFS", category_path %></div>
-                    <div class="category-card-circle"></div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-6 col-md-6 col-xs-12">
-            <a href="/">
-                <div class="category-card-container">
-                    <div class="category-card-title"><%= link_to "ÉCLAIRAGE", category_path %></div>
-                    <div class="category-card-circle"></div>
-                </div>
-            </a>
+    <div class="content-2">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/category/show">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "BOITIERS REFLEX", categories_path %>
+                        </div>
+                            <%= image_tag("reflex.jpeg", :alt => "pixeloo", :class => "category-img")%>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "OBJECTIFS", categories_path %>
+                        </div>
+                            <%= image_tag("objectif.jpeg", :alt => "pixeloo", :class => "category-img")%>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "ÉCLAIRAGE", categories_path %>
+                        </div>
+                            <%= image_tag("eclairage.jpeg", :alt => "pixeloo", :class => "category-img")%>    
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</center>
