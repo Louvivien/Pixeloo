@@ -1,0 +1,85 @@
+.panier-title {
+	text-align: center;
+    margin: 5% 0;
+    font-size: 55px;
+}
+
+.card-panier-container {
+	padding: 4% 0 0 0;
+	margin: 0 0 10% 0;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	transition: .2s; 
+	width: 300px;
+	height: 360px;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-panier-container:hover {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-panier-item-title {
+	margin: 0 0 4% 0;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.card-panier-item-price {
+	margin: 5% 0 8% 0;
+	text-align: center;
+	font-size: 18px;
+}
+
+.card-panier-btn {
+	border: none;
+	margin: 0 3% 0 0;
+	font-weight: bold;
+	color: #FFF;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	border-radius: 30px;
+	height: 40px;
+	width: 130px;
+	transition-duration: 0.1s;
+}
+
+.card-panier-btn:hover {
+	border: 2px solid #FFB75E;
+	background: #FFF;
+	color: black;
+	cursor: pointer;
+}
+
+.panier-total {
+	text-align: left;
+    margin: 5% 0;
+    font-size: 40px;
+}
+
+.delete-btn {
+	font-size: 20px;
+	border: none;
+	margin: 0 3% 0 0;
+	font-weight: bold;
+	color: #FFF;
+	background: #e52d27;
+	background: -webkit-linear-gradient(to right, #b31217, #e52d27);
+	background: linear-gradient(to right, #b31217, #e52d27);
+	border-radius: 6px;
+	height: 60px;
+	width: 240px;
+	transition-duration: 0.3s;
+}
+
+.delete-btn:hover {
+	background: #e52d27;
+	background: -webkit-linear-gradient(to left, #b31217, #e52d27);
+	background: linear-gradient(to left, #b31217, #e52d27);
+	cursor: pointer;
+}

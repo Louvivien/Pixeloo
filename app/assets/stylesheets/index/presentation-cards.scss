@@ -1,0 +1,44 @@
+.content-1 {
+	margin: 5% 0 0 0;
+}
+
+.presentation-card-container {
+	margin: 0 0 7% 0;
+	transition: all 0.3s;
+	width: 220px;
+	height: 220px;
+	border-radius: 10px;
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+	padding: 5% 2%;
+}
+
+.presentation-card-container:hover {
+	box-shadow: 0 13px 25px 0 rgba(0,0,0,.25);
+	transform: translateY(-10px);
+}
+
+.presentation-card-avatar {
+	border-radius: 50%;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to bottom, #ED8F03, #FFB75E);
+	background: linear-gradient(to bottom, #ED8F03, #FFB75E);
+	width: 70px;
+	height: 70px;
+}
+
+.presention-logo {
+	position: relative;
+	top: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.presentation-card-description {
+	margin: 10px 0 0 0;
+	text-align: center;
+	color: #9e9e9e;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 22px;
+	padding: 0 12px;
+}

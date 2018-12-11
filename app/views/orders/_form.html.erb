@@ -1,0 +1,73 @@
+<%= form_with(model: order, local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+<p class="item-new-image-label">À partir de quand souhaitez vous louer les produits ?</p>
+<p> ********* </p>
+
+<br><br>
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <p class="item-new-image-label">Décrivez votre projet</p>
+        <div class="field">
+            <div class="form-group">
+                <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <p class="item-new-image-label">Vos coordonnées</p>
+        <div class="form-group">
+            <%= form.text_field :name, class: "form-control", :placeholder => "Nom" %>
+        </div>
+        <div class="form-group">
+            <%= form.text_field :address, class: "form-control", :placeholder => "Adresse" %>
+        </div>
+        <div class="form-group">
+            <%= form.email_field :email, class: "form-control", :placeholder => "Email" %>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<p class="item-new-image-label">Récapitulatif de votre commande :</p>
+
+<p>*********</p>
+
+
+<p>
+  <strong>ID du Owner:</strong>
+  <%= @cartowner_id %>
+</p>
+
+<p>
+  <strong>ID du Customer:</strong>
+  <%= @order.user_id %>
+</p>
+
+
+<br><br>
+
+<center>
+    <div class="actions">
+        <%= form.submit "Valider", class: "btn-valider" %>
+    </div>
+</center>
+
+<% end %>

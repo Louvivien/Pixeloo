@@ -1,0 +1,42 @@
+<%= form_with(model: @order, local: true) do |form| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this @order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="form-group">
+    <%= form.label :name %><br>
+    <%= @order.name %>
+  </div>
+
+
+<div class="form-group">
+    <%= form.label :address %><br>
+    <%= @order.address %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :status %><br>
+    <%= @order.email %>
+  </div>
+
+
+
+<center><%= link_to 'Valider la location', order_validation_path(:id => @order.id, 'status' => 1, :method => :put %><center>
+
+
+
+  
+  </div>
+
+<% end %>
+
+

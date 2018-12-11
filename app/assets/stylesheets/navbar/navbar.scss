@@ -1,0 +1,49 @@
+nav {
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+	margin: 1% 0;
+	font-size: 22px !important;
+}
+
+.nav-link {
+	font-size: 18px;
+}
+
+.nav-link:hover {
+	color: #FFB75E !important;
+}
+
+.nav-search-bar {
+	padding: 0 55px 0 20px;
+	transition: 0.2s;
+	height: 40px;
+	width: 255px;
+	font-size: 18px;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 1px 6px 0 rgba(0,0,0,.1);
+}
+
+.nav-bar-submit {
+	position: relative;
+	right: 40px;
+	height: 33px;
+	width: 33px;
+	border: none;
+	border-radius: 50px;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
+}
+
+.nav-bar-submit:active {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
+
+.nav-submit-logo {
+	position: relative;
+	right: 3px;
+}

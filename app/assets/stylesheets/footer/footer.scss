@@ -1,0 +1,70 @@
+footer {
+	margin: 5% 0 0 0;
+	padding: 5% 5%;
+	background: #e0e0e0;
+	background: -webkit-linear-gradient(to right, #fff, #e0e0e0);
+	background: linear-gradient(to right, #fff, #e0e0e0);
+}
+
+.footer-titre {
+	color: #FFB75E;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.footer-text {
+	text-decoration: none;
+	color: black;
+}
+
+footer ul {
+	list-style: none;
+}
+
+.footer-text:hover {
+	text-decoration: none;
+	color: #FFB75E;
+}
+
+.newsletter-label {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.newsletter-bar {
+	margin: 0 0 10% 0;
+	padding: 0 65px 0 20px;
+	transition: 0.2s;
+	height: 50px;
+	width: 290px;
+	font-size: 24px;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
+
+.newsletter-bar:hover {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+.newsletter-bar:focus {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+.newsletter-submit {
+	position: relative;
+	right: 50px;
+	bottom: 4px;
+	height: 40px;
+	width: 40px;
+	border: none;
+	border-radius: 50px;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+	background: linear-gradient(to left, #ED8F03, #FFB75E);
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
+}
+
+.newsletter-submit:active {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
