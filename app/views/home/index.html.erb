@@ -100,8 +100,7 @@ autocomplete('#aa-search-input',
     templates: {
         suggestion: function(suggestion) {
           return '<span>' +
-            suggestion._highlightResult.title.value + '</span><span>' + ' ' +
-            suggestion._highlightResult.description.value + '</span>';
+            suggestion._highlightResult.title.value + '</span>'
         }
     }
 });

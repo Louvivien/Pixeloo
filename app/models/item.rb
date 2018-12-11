@@ -29,8 +29,9 @@ class Item < ApplicationRecord
     self.save!
   end
 
-
+=begin
   algoliasearch do
     attribute :title, :description
   end
+=end
 end
