@@ -103,13 +103,13 @@
 #toast-container > .toast-warning {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=") !important;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .category-title {
   margin: 5% 0;
   font-size: 55px;
 }
 
-/* line 6, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 6, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .brand-btn {
   margin: 0 3% 0 0;
   text-decoration: none;
@@ -128,7 +128,7 @@
   transition-duration: 0.2s;
 }
 
-/* line 24, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 24, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .brand-btn:hover {
   text-decoration: none;
   color: #FFF;
@@ -136,44 +136,45 @@
   opacity: 0.8;
 }
 
-/* line 31, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 31, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .category-item {
   margin: 5% 0 0 0;
 }
 
-/* line 35, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 35, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .item-card-container {
   margin: 10% 0 5% 0;
 }
 
-/* line 40, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 40, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .item-img {
   transition: 0.3s;
-  width: 300px;
-  height: 180px;
+  padding: 4% 4%;
+  width: 260px;
   border-radius: 14px;
 }
 
-/* line 47, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 47, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .item-img:hover {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 51, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 51, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .item-title {
   font-weight: bold;
   font-size: 24px;
 }
 
-/* line 56, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 56, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .item-price {
   font-weight: bold;
   font-size: 24px;
   color: #FFB75E;
 }
 
-/* line 62, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 62, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .panier-btn {
+  margin: 5% 0 0 0;
   text-align: center;
   text-decoration: none;
   padding: 1% 2%;
@@ -184,34 +185,34 @@
   border-radius: 50px;
 }
 
-/* line 73, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 74, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .panier-btn:hover {
   text-decoration: none;
   background: #eeeeee;
   color: black;
 }
 
-/* line 79, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/category/category.scss */
+/* line 80, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/category/category.scss */
 .panier-btn:active {
   background: #fff;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .devise-title {
   font-size: 45px;
   font-weight: bold;
 }
 
-/* line 6, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 6, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .text-form {
   margin: 0 0 15% 0;
 }
 
-/* line 10, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 10, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .form-container {
   margin: 8% 7% 0 7%;
 }
 
-/* line 14, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 14, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .devise-btn {
   margin: 0 0 10% 0;
   border: none;
@@ -232,7 +233,7 @@
   transition-duration: 0.2s;
 }
 
-/* line 34, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 34, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .devise-btn:hover {
   text-decoration: none;
   color: #FFF;
@@ -240,14 +241,14 @@
   opacity: 0.8;
 }
 
-/* line 41, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
+/* line 41, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/devise/sign_in.scss */
 .devise-btn:active {
   text-decoration: none;
   color: #FFF;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   opacity: 1;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 footer {
   margin: 5% 0 0 0;
   padding: 5% 5%;
@@ -256,64 +257,64 @@ footer {
   background: linear-gradient(to right, #fff, #e0e0e0);
 }
 
-/* line 9, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 9, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .footer-titre {
   color: #FFB75E;
   font-weight: bold;
   font-size: 24px;
 }
 
-/* line 15, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 15, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .footer-text {
   text-decoration: none;
   color: black;
 }
 
-/* line 20, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 20, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 footer ul {
   list-style: none;
 }
 
-/* line 24, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 24, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .footer-text:hover {
   text-decoration: none;
   color: #FFB75E;
 }
 
-/* line 29, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 29, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-label {
   font-weight: bold;
   font-size: 24px;
 }
 
-/* line 34, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 34, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-bar {
   margin: 0 0 10% 0;
   padding: 0 65px 0 20px;
   transition: 0.2s;
   height: 50px;
-  width: 300px;
+  width: 290px;
   font-size: 24px;
   border: none;
   border-radius: 50px;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 46, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 46, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-bar:hover {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 50, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 50, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-bar:focus {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 54, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 54, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-submit {
   position: relative;
-  right: 55px;
-  bottom: 3px;
+  right: 50px;
+  bottom: 4px;
   height: 40px;
   width: 40px;
   border: none;
@@ -324,67 +325,82 @@ footer ul {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 68, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
+/* line 68, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/footer/footer.scss */
 .newsletter-submit:active {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
 .index-category-title {
   margin: 5% 0;
   text-align: center;
   font-size: 55px;
 }
 
-/* line 7, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+/* line 7, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
 .content-2 {
-  margin: 5% 5% 0 12%;
+  margin: 5% 0 0 0;
 }
 
-/* line 11, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+/* line 11, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
 .category-card-container {
   margin: 0 0 7% 0;
   transition: all 0.3s;
   width: 340px;
   height: 180px;
-  border-radius: 10px;
-  background: #FFB75E;
-  background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
-  background: linear-gradient(to left, #ED8F03, #FFB75E);
+  border-radius: 100px;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
   padding: 5% 2%;
 }
 
-/* line 24, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+/* line 21, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
 .category-card-container:hover {
   box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-10px);
 }
 
-/* line 29, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
-.category-card-circle {
+/* line 26, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+.category-card-title a {
   position: relative;
-  bottom: 77px;
-  left: 91px;
-  width: 240px;
-  height: 180px;
-  background: #fff;
-  border-radius: 40% 4.5% 4.5% 40% / 50% 4.5% 4.5% 50%;
-}
-
-/* line 39, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
-.category-card-title {
+  top: 1px;
+  z-index: 2;
+  text-decoration: none;
   color: #fff;
   font-size: 22px;
   font-weight: bold;
   line-height: 22px;
-  padding: 5% 2%;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+
+/* line 37, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+.category-card-title a:hover {
+  text-decoration: none;
+  color: #FFB75E;
+}
+
+/* line 42, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+.category-img {
+  -webkit-filter: blur(0.7px);
+  filter: blur(0.7px);
+  z-index: 1;
+  position: relative;
+  bottom: 52px;
+  right: 10px;
+  height: 180px;
+  width: 340px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+/* line 55, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/category-cards.scss */
+.category-img:hover {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 main {
   margin: 5% 0;
 }
 
-/* line 5, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 5, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .title {
   background: -webkit-linear-gradient(45deg, #FFB75E, #ED8F03);
   -webkit-background-clip: text;
@@ -393,13 +409,13 @@ main {
   font-weight: bold;
 }
 
-/* line 13, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 13, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .brand-description {
   font-size: 40px;
   margin: 1% 0 5% 0;
 }
 
-/* line 18, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 18, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .main-search-bar {
   margin: 0 0 10% 0;
   padding: 0 65px 0 20px;
@@ -412,21 +428,21 @@ main {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 30, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 30, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .main-search-bar:hover {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 34, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 34, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .main-search-bar:focus {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 38, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 38, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .search-bar-submit {
   position: relative;
-  right: 55px;
-  bottom: 3px;
+  right: 50px;
+  bottom: 4px;
   height: 40px;
   width: 40px;
   border: none;
@@ -437,23 +453,23 @@ main {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 52, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 52, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .search-bar-submit:active {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 56, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/main.scss */
+/* line 56, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/main.scss */
 .main-img {
   margin: 0 0 10% 0;
   border-radius: 78% 22% 40% 60% / 40% 22% 78% 60%;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
 .content-1 {
-  margin: 5% 5% 0 10%;
+  margin: 5% 0 0 0;
 }
 
-/* line 5, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+/* line 5, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
 .presentation-card-container {
   margin: 0 0 7% 0;
   transition: all 0.3s;
@@ -464,16 +480,14 @@ main {
   padding: 5% 2%;
 }
 
-/* line 15, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+/* line 15, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
 .presentation-card-container:hover {
   box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-10px);
 }
 
-/* line 20, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+/* line 20, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
 .presentation-card-avatar {
-  position: relative;
-  left: 68px;
   border-radius: 50%;
   background: #FFB75E;
   background: -webkit-linear-gradient(to bottom, #ED8F03, #FFB75E);
@@ -482,48 +496,48 @@ main {
   height: 70px;
 }
 
-/* line 31, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
-.presentation-card-title {
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 22px;
-  padding: 5% 2%;
+/* line 29, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+.presention-logo {
+  position: relative;
+  top: 10px;
+  width: 50px;
+  height: 50px;
 }
 
-/* line 39, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
+/* line 36, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/index/presentation-cards.scss */
 .presentation-card-description {
+  margin: 10px 0 0 0;
   text-align: center;
-  color: #c4cfd7;
+  color: #9e9e9e;
   font-size: 16px;
   font-weight: bold;
   line-height: 22px;
   padding: 0 12px;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-container-1 {
   margin: 5% 0 0 0;
 }
 
-/* line 5, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 5, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-title {
   font-size: 28px;
   font-weight: bold;
 }
 
-/* line 10, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 10, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-price {
   font-size: 24px;
   font-weight: bold;
   color: #FFB75E;
 }
 
-/* line 16, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 16, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-description {
   font-size: 22px;
 }
 
-/* line 20, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 20, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-panier-btn {
   text-align: center;
   text-decoration: none;
@@ -537,43 +551,38 @@ main {
   border-radius: 50px;
 }
 
-/* line 33, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 33, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-panier-btn:hover {
   text-decoration: none;
   background: #eeeeee;
   color: black;
 }
 
-/* line 40, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 40, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-panier-btn:active {
   background: #fff;
 }
 
-/* line 44, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 44, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-img {
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
-  border: 10px solid #fff;
+  padding: 4% 4%;
+  border-radius: 20px;
   width: 500px;
-  height: 300px;
 }
 
-/* line 51, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
-.item-show-container-2 {
-  margin: 7% 30% 0 0;
-}
-
-/* line 55, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 51, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-show-title-2 {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 60, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
-.item-show-container-3 {
+/* line 56, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
+.item-show-container-2 {
   margin: 7% 0 0 0;
 }
 
-/* line 64, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 60, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .owner-card-container {
   margin: 0 0 10% 0;
   width: 250px;
@@ -582,12 +591,12 @@ main {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 72, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 68, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .owner-card-img {
   border-radius: 6px 6px 0 0;
 }
 
-/* line 76, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 72, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .owner-card-name {
   position: relative;
   top: 16px;
@@ -595,13 +604,13 @@ main {
   font-size: 18px;
 }
 
-/* line 83, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 79, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-new-image-label {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 88, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 84, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-new-btn {
   margin: 0 0 50px 0;
   font-size: 24px;
@@ -614,39 +623,39 @@ main {
   border-radius: 50px;
 }
 
-/* line 100, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 96, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-new-btn:hover {
   text-decoration: none;
   background: #eeeeee;
   color: black;
 }
 
-/* line 107, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/item/item.scss */
+/* line 103, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/item/item.scss */
 .item-new-btn:active {
   background: #fff;
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 nav {
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 5, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 5, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .navbar-brand {
   margin: 1% 0;
   font-size: 22px !important;
 }
 
-/* line 10, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 10, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .nav-link {
   font-size: 18px;
 }
 
-/* line 14, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 14, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .nav-link:hover {
   color: #FFB75E !important;
 }
 
-/* line 18, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 18, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .nav-search-bar {
   padding: 0 55px 0 20px;
   transition: 0.2s;
@@ -658,7 +667,7 @@ nav {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 29, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 29, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .nav-bar-submit {
   position: relative;
   right: 40px;
@@ -672,18 +681,52 @@ nav {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 42, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+/* line 42, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
 .nav-bar-submit:active {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 1, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+
+/* line 46, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/navbar/navbar.scss */
+.nav-submit-logo {
+  position: relative;
+  right: 3px;
+}
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/order/new.scss */
+textarea.form-control {
+  min-height: 146px !important;
+}
+
+/* line 5, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/order/new.scss */
+.btn-valider {
+  font-size: 20px;
+  border: none;
+  margin: 0 3% 0 0;
+  font-weight: bold;
+  color: #FFF;
+  background: #FFB75E;
+  background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+  background: linear-gradient(to right, #ED8F03, #FFB75E);
+  border-radius: 6px;
+  height: 60px;
+  width: 240px;
+  transition-duration: 0.3s;
+}
+
+/* line 20, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/order/new.scss */
+.btn-valider:hover {
+  background: #FFB75E;
+  background: -webkit-linear-gradient(to left, #ED8F03, #FFB75E);
+  background: linear-gradient(to left, #ED8F03, #FFB75E);
+  cursor: pointer;
+}
+/* line 1, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .panier-title {
   text-align: center;
   margin: 5% 0;
   font-size: 55px;
 }
 
-/* line 7, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 7, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-container {
   padding: 4% 0 0 0;
   margin: 0 0 10% 0;
@@ -696,14 +739,14 @@ nav {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 19, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 19, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-container:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 25, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 25, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-item-title {
   margin: 0 0 4% 0;
   text-align: center;
@@ -711,17 +754,15 @@ nav {
   font-weight: bold;
 }
 
-/* line 32, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 32, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-item-price {
   margin: 5% 0 8% 0;
   text-align: center;
   font-size: 18px;
 }
 
-/* line 38, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 38, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-btn {
-  position: relative;
-  left: 85px;
   border: none;
   margin: 0 3% 0 0;
   font-weight: bold;
@@ -735,7 +776,7 @@ nav {
   transition-duration: 0.1s;
 }
 
-/* line 54, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 52, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .card-panier-btn:hover {
   border: 2px solid #FFB75E;
   background: #FFF;
@@ -743,15 +784,16 @@ nav {
   cursor: pointer;
 }
 
-/* line 61, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 59, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .panier-total {
   text-align: left;
   margin: 5% 0;
   font-size: 40px;
 }
 
-/* line 67, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 65, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .delete-btn {
+  font-size: 20px;
   border: none;
   margin: 0 3% 0 0;
   font-weight: bold;
@@ -760,12 +802,12 @@ nav {
   background: -webkit-linear-gradient(to right, #b31217, #e52d27);
   background: linear-gradient(to right, #b31217, #e52d27);
   border-radius: 6px;
-  height: 40px;
-  width: 130px;
+  height: 60px;
+  width: 240px;
   transition-duration: 0.3s;
 }
 
-/* line 81, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
+/* line 80, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/panier/panier.scss */
 .delete-btn:hover {
   background: #e52d27;
   background: -webkit-linear-gradient(to left, #b31217, #e52d27);
@@ -789,18 +831,18 @@ nav {
 
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
-/* line 21, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/application.scss */
+/* line 21, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/application.scss */
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-/* line 25, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/application.scss */
+/* line 25, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/application.scss */
 ::-moz-selection {
   background: #FFB75E;
   color: #fff;
 }
 
-/* line 30, /home/louvivien/vivien/sem10lundi/Pixeloo/app/assets/stylesheets/application.scss */
+/* line 30, /home/louvivien/vivien/sem10mardi/Pixeloo/app/assets/stylesheets/application.scss */
 ::selection {
   background: #FFB75E;
   color: #fff;
