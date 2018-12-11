@@ -1,7 +1,9 @@
 class Item < ApplicationRecord
 	
   has_many :line_items, dependent: :nullify
-  
+  belongs_to :user
+
+
   has_one_attached :item_image
   has_and_belongs_to_many :orders
 
@@ -20,6 +22,12 @@ class Item < ApplicationRecord
   validates :image_url, presence: {
     message: "L'image doit être renseigné."
   }
+
+  def set_user!(user)
+    self.user_id = user.id
+
+    self.save!
+  end
 
 
 end

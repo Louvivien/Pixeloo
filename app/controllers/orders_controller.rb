@@ -30,6 +30,8 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
       @order.cart = @cart
+      @order.user = current_user
+
 
 
     respond_to do |format|

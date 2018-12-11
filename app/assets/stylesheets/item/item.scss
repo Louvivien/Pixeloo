@@ -43,9 +43,13 @@
 
 .item-show-img {
 	box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
-	border: 10px solid #fff;
+	padding: 4% 4%;
+	border-radius: 20px;
 	width: 500px;
-	height: 300px;
+}
+
+.item-show-img:hover {
+	
 }
 
 .item-show-container-2 {
@@ -78,4 +82,32 @@
 	top: 16px;
 	text-align: center;
 	font-size: 18px;
+}
+
+.item-new-image-label {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-new-btn {
+	margin: 0 0 50px 0;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2% 4%;
+	color: black;
+	background: #fff;
+	cursor: pointer;
+	border: 2px solid #FFB75E;
+	border-radius: 50px
+}
+
+.item-new-btn:hover {
+	text-decoration: none;
+	background: #eeeeee; 
+	color: black;
+
+}
+
+.item-new-btn:active {
+	background: #fff;
 }
