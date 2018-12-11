@@ -14,48 +14,46 @@
 
 
 
-<p> A partir de quand souhaitez vous louer les produits ? </p>
-
-<p> ********* </p>
-
-
-<p> Décrivez votre projet </p>
-
-<p> ********* </p>
-
-
-
-
-<div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control" %>
-  </div>
-
-
-<div class="form-group">
-    <%= form.label :address %>
-    <%= form.text_field :address, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
-  </div>
-
-
-<p> Récapitulatif de votre commande : </p>
-
+<p class="item-new-image-label">À partir de quand souhaitez vous louer les produits ?</p>
 <p> ********* </p>
 
 <br><br>
 
 
+<p class="item-new-image-label">Décrivez votre projet</p>
+  <div class="field">
+      <div class="form-group">
+          <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
+      </div>
+  </div>
 
+
+<div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control" %>
+</div>
+
+<br><br>
+
+<p class="item-new-image-label">Récapitulatif de votre commande :</p>
+
+<p>*********</p>
+
+<br><br>
 
   <div class="actions">
     <%= form.submit "Valider", class: "btn btn-success" %>
   </div>
-
-
 
 <% end %>

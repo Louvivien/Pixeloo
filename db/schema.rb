@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_12_05_230133) do
 <<<<<<< HEAD
 =======
@@ -19,6 +20,9 @@ ActiveRecord::Schema.define(version: 2018_12_05_230133) do
 =======
 ActiveRecord::Schema.define(version: 2018_12_06_144500) do
 >>>>>>> seedItems
+=======
+ActiveRecord::Schema.define(version: 2018_12_10_131059) do
+>>>>>>> development
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,12 +56,16 @@ ActiveRecord::Schema.define(version: 2018_12_06_144500) do
 <<<<<<< HEAD
   create_table "categories", force: :cascade do |t|
     t.string "title"
+<<<<<<< HEAD
 =======
   create_table "images", force: :cascade do |t|
     t.string "title"
     t.string "img_url"
     t.integer "item_id"
 >>>>>>> seedItems
+=======
+    t.text "description"
+>>>>>>> development
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,7 +78,10 @@ ActiveRecord::Schema.define(version: 2018_12_06_144500) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "category_id"
+<<<<<<< HEAD
     t.string "image_url"
+=======
+>>>>>>> development
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -92,7 +103,9 @@ ActiveRecord::Schema.define(version: 2018_12_06_144500) do
     t.bigint "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -122,4 +135,5 @@ ActiveRecord::Schema.define(version: 2018_12_06_144500) do
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "items"
   add_foreign_key "orders", "carts"
+  add_foreign_key "orders", "users"
 end
