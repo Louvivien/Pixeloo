@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-	
+	include AlgoliaSearch
   has_many :line_items, dependent: :nullify
   
   has_one_attached :item_image
@@ -21,5 +21,7 @@ class Item < ApplicationRecord
     message: "L'image doit être renseigné."
   }
 
-
+  algoliasearch do
+    attribute :title, :description
+  end
 end

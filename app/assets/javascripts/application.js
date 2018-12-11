@@ -15,4 +15,4 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
+//= require algolia/v3/algoliasearch.min

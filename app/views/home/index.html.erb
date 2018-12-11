@@ -4,7 +4,7 @@
         <p class="title">PIXELOO</p>
         <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
         <form>
-            <input class="main-search-bar" type="text" placeholder="Que recherches-tu ?">
+            <input id="aa-search-input" class="main-search-bar" id="item" type="search" placeholder="Que recherches-tu ?">
             <button class="search-bar-submit" type="submit">🖐</button>
         </form>
         </div>
@@ -12,6 +12,7 @@
         <%= image_tag("main_img.jpg", :alt => "pixeloo" , :class => "img-fluid main-img")%>
         </div>
     </div>
+   
 </main>
 
 <div class="content-1">
@@ -70,3 +71,25 @@
         </div>
     </div>
 </div>
+
+
+<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<!-- Initialize autocomplete menu -->
+<script>
+var client = algoliasearch('489HLI3B0A', 'afb715b7a8626e4dcbc991783fa9acd9');
+var index = client.initIndex('Item');
+autocomplete('#aa-search-input',
+{ hint: false }, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+    displayKey: 'title',
+    templates: {
+        suggestion: function(suggestion) {
+          return '<span>' +
+            suggestion._highlightResult.title.value + '</span><span>' + ' ' +
+            suggestion._highlightResult.description.value + '</span>';
+        }
+    }
+});
+</script>
