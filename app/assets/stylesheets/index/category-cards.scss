@@ -40,6 +40,7 @@
 }
 
 .category-img {
+	-webkit-filter: blur(.7px);
 	filter: blur(.7px);
 	z-index: 1;
 	position: relative;
@@ -52,5 +53,6 @@
 }
 
 .category-img:hover {
+	-webkit-filter: blur(0px);
 	filter: blur(0px);
 }
