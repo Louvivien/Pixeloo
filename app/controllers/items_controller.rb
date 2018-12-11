@@ -4,6 +4,8 @@ class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+ 
+
   # GET /items
   # GET /items.json
   def index
@@ -15,10 +17,6 @@ class ItemsController < ApplicationController
     end
 
   end
-
-
-
-  
 
   # GET /items/1
   # GET /items/1.json
