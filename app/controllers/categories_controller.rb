@@ -8,6 +8,11 @@ class CategoriesController < ApplicationController
     @categories = Category.where("user_id = ?", current_user)
     end
 
+  def index
+    @categories = Category.all
+  end
+
+  def create
   end
 
 
@@ -36,6 +41,7 @@ class CategoriesController < ApplicationController
   def edit
   end
 
+<<<<<<< HEAD
   # POST /categories
   # POST /categories.json
   def create
@@ -77,6 +83,10 @@ class CategoriesController < ApplicationController
       format.html { redirect_to items_url, notice: 'category was successfully destroyed.' }
       format.json { head :no_content }
     end
+=======
+  def show
+    @items = Item.all.order(:id)
+>>>>>>> development
   end
 
   private

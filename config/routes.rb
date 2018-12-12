@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/admin/user/*/edit', to: 'devise/registrations#edit' 
-  get "/categories/shoW", to: "categories#show", as: "categories"
+  get "/categories/show", to: "categories#show", as: "categories"
+
   resources :categories
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :orders
@@ -12,6 +14,4 @@ Rails.application.routes.draw do
   put '/statusupdate', to: 'order_validations#update'
   resources :order_validations
   resources :charges, only: [:new, :create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
