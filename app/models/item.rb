@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-	include AlgoliaSearch
+
   has_many :line_items, dependent: :nullify
   belongs_to :user
 
@@ -29,9 +29,4 @@ class Item < ApplicationRecord
     self.save!
   end
 
-=begin
-  algoliasearch do
-    attribute :title, :description
-  end
-=end
 end

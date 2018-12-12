@@ -4,7 +4,7 @@
         <p class="title">PIXELOO</p>
         <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
         <form>
-            <input id="aa-search-input" class="main-search-bar" id="item" type="search" placeholder="Que recherches-tu ?">
+            <input id="search-input" class="main-search-bar" id="item" type="search" placeholder="Que recherches-tu ?">
             <button class="search-bar-submit" type="submit">
                 <%= image_tag("search.png")%>
             </button>
@@ -83,25 +83,23 @@
             </div>
         </div>
     </div>
-</div>
 
+    <div class="result-search-content">
+    <div id="hits"></div>
+    <div id="pagination"></div>
+    
+    </div>
+<center>
 
-<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-<!-- Initialize autocomplete menu -->
-<script>
-var client = algoliasearch('489HLI3B0A', 'afb715b7a8626e4dcbc991783fa9acd9');
-var index = client.initIndex('Item');
-autocomplete('#aa-search-input',
-{ hint: false }, {
-    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-    displayKey: 'title',
-    templates: {
-        suggestion: function(suggestion) {
-          return '<span>' +
-            suggestion._highlightResult.title.value + '</span>'
-        }
-    }
-});
+<script type="text/html" id="hit-template">
+    <div class="hit"> 
+        <div class="hit-image"> 
+            <img src="{{image}}" alt="{{name}}">
+        </div>
+        <div class="hit-content">
+            <h3 class="hit-price"> </h3>
+            <h2 class="hit-name">{{{_highlightResult.title.value}}} </h2>
+            <p class="hit-description">{{{_highlightResult.description.value}}} </p>
+        </div>
+    </div>
 </script>
