@@ -13,61 +13,94 @@
 
 
 
-
-<p class="item-new-image-label">À partir de quand souhaitez vous louer les produits ?</p>
-<p> ********* </p>
-
-<br><br>
-
-
 <div class="row">
     <div class="col-lg-6">
-        <p class="item-new-image-label">Décrivez votre projet</p>
+
+
+
+
+        <p class="item-new-image-label">Combien de jours souhaites-tu louer le matériel ?</p>
+        <div class="field">
+            <div class="form-group">
+                <%= form.number_field :nb_day, class: 'form-control' %>
+            </div>
+        </div>
+
+          <p>
+        <strong>Prix par jour:</strong>
+        <%= number_to_currency(@dailyprice, unit: "€ / jour", separator: ",", format: "%n %u") %>
+      </p>
+
+
+
+        <p class="item-new-image-label">A partir de quand ?</p>
+        <div class="field">
+            <div class="form-group">
+          <%= form.date_field :start_date, class: 'form-control' %>
+            </div>
+ 
+
+
+        <p class="item-new-image-label">Est ce que tu peux décrire l'utilisation que tu vas en faire ?</p>
         <div class="field">
             <div class="form-group">
                 <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
+
         <p class="item-new-image-label">Vos coordonnées</p>
+        
         <div class="form-group">
             <%= form.text_field :name, class: "form-control", :placeholder => "Nom" %>
         </div>
+        
         <div class="form-group">
             <%= form.text_field :address, class: "form-control", :placeholder => "Adresse" %>
         </div>
+        
         <div class="form-group">
             <%= form.email_field :email, class: "form-control", :placeholder => "Email" %>
         </div>
-    </div>
+
+        <div class="form-group">
+            <%= form.text_field :phone, class: "form-control", :placeholder => "Téléphone" %>
+        </div>
+
+ 
+ 
+      
+      <br><br>
+
+      <p>
+        <strong>ID du Owner:</strong>
+        <%= @owner_id %>
+      </p>
+
+      <p>
+        <strong>ID du Customer:</strong>
+        <%= @customer_id %>
+      </p> 
+
+    </div>    
 </div>
 
-<br><br>
+      <br><br>
 
-<p class="item-new-image-label">Récapitulatif de votre commande :</p>
+<div class="container">
+  <div class="row">
+      <div class="col-md-auto">
 
-<p>*********</p>
+        <center>
+            <div class="actions">
+                <%= form.submit "Valider", class: "btn-valider" %>
+            </div>
+        </center>
+
+      </div>    
+  </div>
+</div>
 
 
-<p>
-  <strong>ID du Owner:</strong>
-  <%= @owner_id %>
-</p>
-
-<p>
-  <strong>ID du Customer:</strong>
-  <%= @customer_id %>
-</p>
-
-
-<br><br>
-
-<center>
-    <div class="actions">
-        <%= form.submit "Valider", class: "btn-valider" %>
-    </div>
-</center>
 
 <% end %>

@@ -17,6 +17,8 @@ module CurrentCart
 		@cartcustomer_id = current_user.id
   	end
 
-
-
+    def set_price
+      @currentcart = Cart.find(session[:cart_id])
+      @cartprice = @currentcart.total
+      end
 end     
