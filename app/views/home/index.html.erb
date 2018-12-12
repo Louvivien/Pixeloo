@@ -47,21 +47,39 @@
     </div>
     
     <p class="index-category-title">Categories</p>
-
+    
     <div class="content-2">
         <div class="row">
-            <% @categories.each do |category| %>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                        <div class="category-card-container">
-                            <div class="category-card-title">
-                                <%= link_to category.title,category %>
-                            </div>
-                            <% if category.category_image.attached? %>
-                                <%= link_to image_tag(category.category_image, width: "50", :alt => "pixeloo" , :class => "category-img"),category %>
-                            <% end %>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/category/show">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "BOITIERS REFLEX", categories_path %>
                         </div>
-                </div>
-            <% end %>
+                            <%= image_tag("reflex.jpg", :alt => "pixeloo", :class => "category-img")%>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "OBJECTIFS", categories_path %>
+                        </div>
+                            <%= image_tag("objectif.jpg", :alt => "pixeloo", :class => "category-img")%>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <a href="/">
+                    <div class="category-card-container">
+                        <div class="category-card-title">
+                            <%= link_to "ÉCLAIRAGE", categories_path %>
+                        </div>
+                            <%= image_tag("eclairage.jpg", :alt => "pixeloo", :class => "category-img")%>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </center>
