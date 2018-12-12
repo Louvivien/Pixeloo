@@ -9,7 +9,7 @@
 
 
 a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postulatus vel hoc rumore multatione aut multatione beluae honoratorum fovisse suos modum bonorum catenarum rumore militarium aut insimulatus enim iniecto iniecto."
-
+user = User.create!(email: "wesh@bienouquoidu5454.fr", password: "azerty")
 
 1.times do |item|
 
@@ -116,3 +116,6 @@ items = Item.create!(title: "nikon-speedlight-sb5000", description: a, price: "2
  items.item_image.attach(io: File.open('app/assets/images/éclairage3/nikon-speedlight-sb5000.png'), filename: 'nikon-speedlight-sb5000.png', content_type: 'image/png')
 
 end
+
+
+
