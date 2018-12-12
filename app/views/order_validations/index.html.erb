@@ -3,31 +3,11 @@
 
   <p class="devise-title">Voici l'état de vos commandes</p>
 
-
-  <p>Ici vous pouvez voir vos demandes de location et les suivre facilement</p>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th>Commande</th>
-        <th>Status de votre commande</th>
-        <th>Panier</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @orders.each do |order| %>
-        <tr>
-          <td><%= order.id %></td>
-          <td><%= order.status %></td>
-          <td><%= order.cart %></td>
-          <td><%= link_to 'Voir la demande', edit_order_validation_path(order), :method => :get %></td>
-          <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% @orders.each do |order| %>
+      <b>Commande numéro:</b> <%= order.id %> <br>
+      <b>Status de votre commande:</b> <%= order.status %> <br>
+      <b>Panier:</b> <%= order.cart %> <br>
+      <%= link_to 'Voir la demande', edit_order_validation_path(order), :method => :get %>
+      <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>

@@ -11,9 +11,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-
-  @items = Item.all.order(:id)
-
+    @items = Item.all.order(:id)
   end
     private
     # Use callbacks to share common setup or constraints between actions.
