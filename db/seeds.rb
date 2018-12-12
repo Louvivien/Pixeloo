@@ -6,10 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
 a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postulatus vel hoc rumore multatione aut multatione beluae honoratorum fovisse suos modum bonorum catenarum rumore militarium aut insimulatus enim iniecto iniecto."
 
+user = User.create!(email: "xesh@alexis.Fr", password: "azerty")
 
 1.times do |item|
 
@@ -89,7 +88,7 @@ items = Item.create!(title: "skylite-900fd-5600k-940", description: a, price: "2
  items.item_image.attach(io: File.open('app/assets/images/éclairage3/skylite-900fd-5600k-940.jpg'), filename: 'skylite-900fd-5600k-940.jpg', content_type: 'image/jpg')
 
 items = Item.create!(title: "mandarine", description: a, price: "15€", user_id: "1", category_id: "2", image_url: "wesh")
- items.item_image.attach(io: File.open('app/assets/images/éclairage3/mandarine.jpg'), filename: 'mandarine.jpg', content_type: 'image/jpeg')
+ items.item_image.attach(io: File.open('app/assets/images/éclairage3/mandarine.jpeg'), filename: 'mandarine.jpeg', content_type: 'image/jpeg')
 
 
 items = Item.create!(title: "PROFOTO-Cine-Reflect-T7BM", description: a, price: "30€", user_id: "1", category_id: "2", image_url: "wesh")
