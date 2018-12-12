@@ -9,13 +9,14 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-
+    @items = Item.search(params[:search])
+=begin
     if current_user.superadmin_role? 
     @items = Item.all.order(:id)
       else
     @items = Item.where("user_id = ?", current_user)
     end
-
+=end
   end
 
   # GET /items/1
@@ -91,7 +92,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:title, :description, :price, :image_url, :item_image)
+      params.require(:item).permit(:title, :description, :price, :image_url, :item_image, :search)
     end
 
 end

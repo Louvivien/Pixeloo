@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-	include AlgoliaSearch
   has_many :line_items, dependent: :nullify
   belongs_to :user
 
@@ -29,9 +28,21 @@ class Item < ApplicationRecord
     self.save!
   end
 
-=begin
-  algoliasearch do
-    attribute :title, :description
+  def self.search(search)
+    if search
+      puts search
+      item = Item.find_by(title: search) || Item.find_by(description: search)
+      puts "item: #{item}"
+      if item
+        puts "item: #{item.title} / #{item.description}"
+        self.where("title LIKE '#{item.title}' ")
+      else
+        puts "sinon 1er puts all"
+        Item.all
+      end
+    else
+      puts "recherche vide donc puts all"
+      Item.all
+    end
   end
-=end
 end
