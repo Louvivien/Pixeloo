@@ -4,6 +4,7 @@ class Order < ApplicationRecord
   enum status: [:en_attente, :accepté, :refusé]
 
   validates :email, presence: true
+   validates :owner_id, presence: true
   validates :status, inclusion: statuses.keys
 
 

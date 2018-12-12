@@ -5,6 +5,7 @@ class OrderValidationsController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 
+
   # GET /orders
   # GET /orders.json
   def index
@@ -13,7 +14,8 @@ class OrderValidationsController < ApplicationController
     if current_user.superadmin_role? 
     @orders = Order.all.order(:id)
       else
-    @orders = Order.where("user_id = ?", current_user)
+    @orders = Order.where("user_id = ?", current_user).or(Order.where("owner_id = ?", current_user))         
+
     end
 
 
@@ -79,15 +81,27 @@ class OrderValidationsController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])
     end
 
+ 
+
     # Never trust parameters from the scary internet, only allow the white list through.
      def order_params
       pp = params.require(:order).permit(:name, :address, :email, :status)
         return pp
     end
+
+
+    
+    
 end
+
+
+
