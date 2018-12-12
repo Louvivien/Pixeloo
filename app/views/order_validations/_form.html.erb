@@ -41,7 +41,7 @@
 
     <div class="form-group">
      <strong>Prix total de la location:</strong>
-     <%= number_to_currency(@order.order_price, unit: "€ / jour", separator: ",", format: "%n %u") %>
+     <%= number_to_currency(@order.order_price, unit: "€", separator: ",", format: "%n %u") %>
   </div>
 
 
