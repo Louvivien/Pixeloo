@@ -3,8 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_cart, only: [:new, :create]
   before_action :redirect_if_cart_is_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-  before_action :set_owner, only: [:new,:show, :edit, :update, :destroy]
-  before_action :set_customer, only: [:new,:show, :edit, :update, :destroy]
+  before_action :set_owner, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :set_customer, only: [:new,:create,:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
@@ -20,8 +20,9 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
-    @order.user_id = current_user.id
-    @order.owner_id = @cartowner_id
+    @owner_id = @cartowner_id
+    @customer_id = @cartcustomer_id  
+
 
   end
 
@@ -33,10 +34,12 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-      @order.cart = @cart
-      @order.user = current_user
-      @order.owner_id = @cartowner_id
-
+    @order.user_id = current_user.id
+    @order.cart = @cart
+    @owner_id = @cartowner_id
+    @order.update!(:owner_id=> @owner_id)   
+    @order.save
+    
 
     respond_to do |format|
       if @order.save
@@ -89,6 +92,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :status)
+      params.require(:order).permit(:name, :address, :email, :status, :owner_id)
     end
 end
