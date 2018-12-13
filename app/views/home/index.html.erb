@@ -1,26 +1,15 @@
 <main>
     <div class="row">
         <div class="col-lg-6">
-        <p class="title">PIXELOO</p>
-        <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
-        <!--
-        <form>
-            <input id="aa-search-input" class="main-search-bar" id="item" type="search" placeholder="Que recherches-tu ?">
-            <button class="search-bar-submit" type="submit">
-                <%= image_tag("search.png")%>
-            </button>
-        </form>
-        -->
+            <p class="title">PIXELOO</p>
+            <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
+    
             <%= form_tag(items_path, method: :get) do %>
-                <%= text_field_tag :search, params[:search] %>
-                <%= submit_tag ("Search") %>
+                <%= text_field_tag :search, params[:search], class: 'main-search-bar', placeholder: 'Que recherches-tu ?' %>
+                <button class="search-bar-submit" type="submit">
+                <%= image_tag("search.png")%>
             <% end %>
-           <!-- <% @items.each do |item| %>
-                <ul>
-                    <li><%= link_to item.title, item_path(item)  %> </li>
-                </ul>
-            <% end %>
-            -->
+           
         </div>
         <div align="center" class="col-lg-6">
         <%= image_tag("main_img.jpg", :alt => "pixeloo" , :class => "img-fluid main-img")%>
