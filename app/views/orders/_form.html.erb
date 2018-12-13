@@ -4,21 +4,15 @@
       <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
       <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-
-
 <div class="row">
     <div class="col-lg-6">
-
-
-
-
         <p class="item-new-image-label">Combien de jours souhaites-tu louer le matériel ?</p>
         <div class="field">
             <div class="form-group">
@@ -26,29 +20,34 @@
             </div>
         </div>
 
-          <p>
-        <strong>Prix par jour:</strong>
-        <%= number_to_currency(@dailyprice, unit: "€ / jour", separator: ",", format: "%n %u") %>
-      </p>
+        <p>
+            <strong>Prix par jour:</strong>
+            <%= number_to_currency(@dailyprice, unit: "€ / jour", separator: ",", format: "%n %u") %>
+        </p>
+    </div>
 
-
-
-        <p class="item-new-image-label">A partir de quand ?</p>
+    <div class="col-lg-6">
+        <p class="item-new-image-label">À partir de quand ?</p>
         <div class="field">
             <div class="form-group">
-          <%= form.date_field :start_date, class: 'form-control' %>
+                <%= form.date_field :start_date, class: 'form-control' %>
             </div>
+    </div>
+</div>
  
 
-
+    <div class="col-lg-6">
+       <br><br>
         <p class="item-new-image-label">Est ce que tu peux décrire l'utilisation que tu vas en faire ?</p>
         <div class="field">
             <div class="form-group">
                 <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
             </div>
         </div>
+    </div>
 
-
+    <div class="col-lg-6">
+       <br><br>
         <p class="item-new-image-label">Vos coordonnées</p>
         
         <div class="form-group">
@@ -66,33 +65,15 @@
         <div class="form-group">
             <%= form.text_field :phone, class: "form-control", :placeholder => "Téléphone" %>
         </div>
+    </div>
 
- 
- 
-      
-      <br><br>
-
-      
-
-    </div>    
 </div>
-
+    <center>
       <br><br>
-
-<div class="container">
-  <div class="row">
-      <div class="col-md-auto">
-
-        <center>
             <div class="actions">
                 <%= form.submit "Valider", class: "btn-valider" %>
             </div>
-        </center>
-
-      </div>    
-  </div>
-</div>
-
-
+    </center>
 
 <% end %>
+</div>

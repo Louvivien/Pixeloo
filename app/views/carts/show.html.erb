@@ -1,6 +1,7 @@
 <body class="background_color">
     <div class="item-show-container">
-        <p class="panier-title">Mon panier</p>
+       
+       <p class="panier-title">Mon panier</p>
         <center>
             <div class="row">
                 <% @cart.line_items.each do |element| %>
@@ -20,23 +21,17 @@
                             </div>
                                 <%= button_to "Commander", new_order_path, method: :get, class: "card-panier-btn" %>
                         </div>
+                      
 
-                        
-                    </div>
-                     
-
-
-                </div>
-            <% end %>
+            </div>
+        <% end %>
         </div>
 
+        <p class="panier-total">
+          Total : <%= number_to_currency(@cart.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
+        </p>
 
-              <p class="panier-total">
-                Total : <%= number_to_currency(@cart.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
-              </p>
-
-              <%= button_to "Vider le panier", @cart, method: :delete, data: {
-                  confirm: "Êtes-vous sûr ?" }, class: "delete-btn" %>
-          </div>
+        <%= button_to "Vider le panier", @cart, method: :delete, data: {
+            confirm: "Êtes-vous sûr ?" }, class: "delete-btn" %>
       </center>
-</body>
+</div>

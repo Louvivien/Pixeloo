@@ -47,9 +47,8 @@
       <p class="devise-title">Propose du matériel à la location</p>
       <%= button_to "Ajouter", new_item_path, method: :get, :class => "devise-btn" %>
 
-      <p><%= link_to "Voir la liste de mes locations", order_validations_path %> <p>
-
-      <p><%= link_to "Voir la liste de mon matériel", items_path %> <p>
+      <%= link_to "Voir la liste de mes locations", order_validations_path %><br>
+      <%= link_to "Voir la liste de mon matériel", items_path %>
 
 
       <br><br>
