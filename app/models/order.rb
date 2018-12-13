@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :cart
   belongs_to :user
-  enum status: [:en_attente, :accepté, :refusé]
+  enum status: [:en_attente, :accepté, :refusé, :confirmé]
 
   validates :email, presence: true
    validates :owner_id, presence: true

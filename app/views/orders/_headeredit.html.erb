@@ -1,0 +1,54 @@
+<%= form_for @order, :url => '/statusupdate', :method => 'PUT' do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="form-group">
+  <strong>Numéro de la demande:</strong>
+  <%= @order.id %>
+  </div>
+
+   <div class="form-group">
+     <strong>Utilisateur:</strong>
+        <% if ordertype(@order) == "Demande"%>
+                <%= customer(@order) %>
+        <% else %>  
+                <%= owner(@order) %>
+        <% end %> 
+  </div>
+
+
+<div class="form-group">
+     <strong>Date de la demande:</strong>
+  <%= @order.created_at %>
+  </div>
+
+
+  <div class="form-group">
+     <strong>Nombre de jour de location:</strong>
+  <%= @order.nb_day %>
+  </div>
+
+  <div class="form-group">
+     <strong>Date de début de la location:</strong>
+  <%= @order.start_date %>
+  </div>
+
+    <div class="form-group">
+     <strong>Description du projet:</strong>
+  <%= @order.description %>
+  </div>
+
+    <div class="form-group">
+     <strong>Prix total de la location:</strong>
+     <%= number_to_currency(@order.order_price, unit: "€", separator: ",", format: "%n %u") %>
+  </div>

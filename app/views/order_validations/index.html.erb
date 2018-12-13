@@ -23,7 +23,20 @@
           <td><%= order.id %></td>
           <td><%= order.status %></td>
           <td><%= order.cart %></td>
-          <td><%= link_to 'Voir la demande', edit_order_validation_path(order), :method => :get %></td>
+          
+
+
+          <td>
+
+            <% if ordertype(order) == "Location" and order.status == "accepté" %>
+            <%= link_to 'Voir les détails', order_validation_path(order), :method => :get %>
+            <% else %>
+            <%= link_to 'Voir les détails', edit_order_validation_path(order), :method => :get %>
+            <% end %>
+
+          </td>
+
+
           <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

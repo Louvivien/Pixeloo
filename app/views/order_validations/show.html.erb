@@ -1,7 +1,14 @@
-<%= form_with(model: @order, local: true) do |form| %>
+ 
+  <div class="form-container">
+  <p class="devise-title">Détail de la demande de location</p>
+
+
+  <p>Ici vous pouvez examiner votre demande de location et suivre son avancement</p>
+
+
   <% if @order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this @order from being saved:</h2>
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
       <ul>
       <% @order.errors.full_messages.each do |message| %>
@@ -13,30 +20,113 @@
 
 
 <div class="form-group">
-    <%= form.label :name %><br>
-    <%= @order.name %>
+  <strong>Numéro de la demande:</strong>
+  <%= @order.id %>
+  </div>
+
+   <div class="form-group">
+     <strong>Utilisateur:</strong>
+        <% if ordertype(@order) == "Demande"%>
+                <%= customer(@order) %>
+        <% else %>  
+                <%= owner(@order) %>
+        <% end %> 
   </div>
 
 
 <div class="form-group">
-    <%= form.label :address %><br>
-    <%= @order.address %>
+     <strong>Date de la demande:</strong>
+  <%= @order.created_at %>
+  </div>
+
+
+  <div class="form-group">
+     <strong>Nombre de jour de location:</strong>
+  <%= @order.nb_day %>
   </div>
 
   <div class="form-group">
-    <%= form.label :status %><br>
-    <%= @order.email %>
+     <strong>Date de début de la location:</strong>
+  <%= @order.start_date %>
+  </div>
+
+    <div class="form-group">
+     <strong>Description du projet:</strong>
+  <%= @order.description %>
+  </div>
+
+    <div class="form-group">
+     <strong>Prix total de la location:</strong>
+     <%= number_to_currency(@order.order_price, unit: "€", separator: ",", format: "%n %u") %>
   </div>
 
 
+<!-- ////////  statut de commande : accepté  
 
-<center><%= link_to 'Valider la location', order_validation_path(:id => @order.id, 'status' => 1, :method => :put %><center>
+Si j'ai une commande de type location  
+- Je vois le status accepté 
+- je vois le bouton de paiement de la commande
+  - l'utilisateur qui s'affiche est un owner
 
+    => va ajouter un status : confirmé 
 
+Si j'ai une commande de type Demande  
+- Je vois le status accepté 
+- Je vois un div qui affiche "en attente de confirmation" ou similaire
+  - l'utilisateur qui s'affiche est un customer
+  -->
 
   
-  </div>
 
+                            <div class="form-group">
+                                      
+                                      <strong> Afin d'être mis en relation avec</strong> <%= customer(@order) %> <strong>nous te prions de payer la commande</strong>
+                                                                 
+
+                                    </div>
+
+
+                                  <div class="actions">
+
+                                                                                 
+  <%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Montant: <%= number_to_currency(@order.order_price, unit: "€", separator: ",", format: "%n %u") %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-label="Payer"
+          data-description="Payer votre panier"
+          data-amount="<%= @order.order_price * 100 %>"
+          data-currency="eur"
+          data-locale="fr"></script>
 <% end %>
+                                        
 
+                                    </div>
+        
+
+                <%= link_to 'Show', @order_validation %> |
+  <%= link_to 'Back', order_validations_path %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      
 

@@ -23,5 +23,17 @@ module OrderValidationsHelper
 		return @owner_name
 	end
 
+	def customer(order)
+  		customer_id = order.user_id
+  		customer = User.find_by id: customer_id		
+  		
+  		if customer.first_name != nil
+  			@customer_name = customer.first_name
+  		elsif customer.username != nil
+  			@customer_name = customer.username
+  		else @customer_name =  "User #{customer_id} (l'utilisateur n'a pas renseigné son nom alors vous pouvez l'appeler comme ca en attendant et lui dire de renseigner son nom et son prénom, ca sera quand même plus pratique)"
+  		  			end 
+		return @customer_name
+	end
 
 end

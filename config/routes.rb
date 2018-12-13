@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :orders
   resources :line_items
+  resources :charges, only: [:new, :create]
   resources :carts
   root 'home#index'
   devise_for :users
   resources :items
   put '/statusupdate', to: 'order_validations#update'
   resources :order_validations
-  resources :charges, only: [:new, :create]
 end
