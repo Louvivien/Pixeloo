@@ -9,9 +9,12 @@
                             <div class="card-panier-item-title">
                                 <%= element.item.title %>
                             </div>
+
                             <div class="card-panier-item-img">
-                                    <%= image_tag("item_img.jpg", :alt => "item" , :class => "img-fluid")%>
+                                    <%= set_image(element) %>
                             </div>
+                    
+
                             <div class="card-panier-item-price">
                                 <%= number_to_currency(element.total, unit: "€ / jour", separator: ",", format: "%n %u") %>
                             </div>

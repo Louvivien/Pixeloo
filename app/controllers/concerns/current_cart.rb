@@ -21,4 +21,6 @@ module CurrentCart
       @currentcart = Cart.find(session[:cart_id])
       @cartprice = @currentcart.total
       end
+
+      
 end     
