@@ -45,8 +45,18 @@
   </div>
 
 
+<!-- ///////// en attente 
+Si j'ai une commande de type location
+  - Je vois le status en attente
+  - je ne peux rien faire sur la page edit
+Si j'ai une commande de type Demande  
+- Je vois le status en attente  
+- Je peux éditer sur la page edit
+ -->
 
-  <% if ordertype(@order) == "Demande" && @order.status == "en_attente") %>
+
+
+  <% if ordertype(@order) == "Demande" and @order.status == "en_attente" %>
     
             <div class="form-group">
               
