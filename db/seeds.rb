@@ -88,7 +88,7 @@ items = Item.create!(title: "skylite-900fd-5600k-940", description: a, price: "2
  items.item_image.attach(io: File.open('app/assets/images/éclairage3/skylite-900fd-5600k-940.jpg'), filename: 'skylite-900fd-5600k-940.jpg', content_type: 'image/jpg')
 
 items = Item.create!(title: "mandarine", description: a, price: "15€", user_id: "1", category_id: "2", image_url: "wesh")
- items.item_image.attach(io: File.open('app/assets/images/éclairage3/mandarine.jpeg'), filename: 'mandarine.jpeg', content_type: 'image/jpeg')
+ items.item_image.attach(io: File.open('app/assets/images/éclairage3/mandarine.jpg'), filename: 'mandarine.jpg', content_type: 'image/jpg')
 
 
 items = Item.create!(title: "PROFOTO-Cine-Reflect-T7BM", description: a, price: "30€", user_id: "1", category_id: "2", image_url: "wesh")
