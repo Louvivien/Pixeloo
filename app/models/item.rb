@@ -2,7 +2,6 @@ class Item < ApplicationRecord
 	
   has_many :line_items, dependent: :nullify
   belongs_to :user
-  belongs_to :category
 
 
   has_one_attached :item_image

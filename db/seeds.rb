@@ -116,16 +116,3 @@ items = Item.create!(title: "nikon-speedlight-sb5000", description: a, price: "2
 
 end
 
-
-1.times do |category|
-
-categories = Category.create!(title: "BOITIER RÉFLEXE", description: a)
- categories.category_image.attach(io: File.open('app/assets/images/reflex.jpeg'), filename: 'reflex.jpeg', content_type: 'image/jpeg')
-
-categories = Category.create!(title: "ÉCLAIRAGES", description: a)
- categories.category_image.attach(io: File.open('app/assets/images/eclairage.jpeg'), filename: 'eclairage.jpeg', content_type: 'image/jpeg')
-
-categories = Category.create!(title: "OBJECTIFS", description: a)
- categories.category_image.attach(io: File.open('app/assets/images/objectif.jpeg'), filename: 'objectif.jpeg', content_type: 'image/jpeg')
-
-end
