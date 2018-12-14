@@ -98,26 +98,95 @@ Si j'ai une commande de type Demande
                   
                   <!-- ////////  statut de commande : accepté  
 
-Si j'ai une commande de type location  
-=> l'utilisateur est alors orienté vers la page show plutot qu'ici
-- Je vois le status accepté 
-- je vois le bouton de paiement de la commande
-  - l'utilisateur qui s'affiche est un owner
+                    Si j'ai une commande de type location  
+                    => l'utilisateur est alors orienté vers la page show plutot qu'ici
+                    - Je vois le status accepté 
+                    - je vois le bouton de paiement de la commande
+                      - l'utilisateur qui s'affiche est un owner
 
-    => va ajouter un status : confirmé 
+                        => va ajouter un status : confirmé 
 
-Si j'ai une commande de type Demande  
-- Je vois le status accepté 
-- Je vois un div qui affiche "en attente de confirmation" ou similaire
-  - l'utilisateur qui s'affiche est un customer
-  -->
+                    Si j'ai une commande de type Demande  
+                    - Je vois le status accepté 
+                    - Je vois un div qui affiche "en attente de confirmation" ou similaire
+                      - l'utilisateur qui s'affiche est un customer
+                      -->
 
                           
 
 
- <strong>L'utilisateur </strong>  
-              <%= owner(@order) %> <strong> va confirmer la demande et payer la commande, tu recevras alors ses coordonnées. </strong>  
-     
+                   <strong>L'utilisateur </strong>  
+                                <%= customer(@order) %> <strong> va confirmer la demande et payer la commande, tu recevras alors ses coordonnées. </strong>  
+
+
+
+<% elsif ordertype(@order) == "Demande" and @order.status == "confirmé" %>
+                  
+                  <!-- ////////// statut de commande confirmé
+  
+
+                Si j'ai une commande de type location
+                  - Je vois le status en confirmé
+                  - je vois les infos de contact du owner
+                  
+                Si j'ai une commande de type Demande
+                  - Je vois le status confirmé
+                  - Je vois les infos de contact du user
+                    -->
+
+                <p>Nous t'invitons à contacter <%= customer(@order) %></p>
+                <strong>Email :  </strong> 
+                <p><%= mail_to @order.email, "#{@order.email}"%></p>
+                <strong>Téléphone :  </strong> 
+                <p><%= @order.phone %></p>
+                <strong>Adresse :  </strong> 
+                <p><%= @order.address %></p>
+
+
+
+
+               <% elsif ordertype(@order) == "Location" and @order.status == "confirmé" %>
+                            
+              
+
+              <p>Nous t'invitons à contacter <%= owner(@order) %> ; </p>
+
+              <p>il a également reçu tes coordonées et va te contacter</p>
+
+              <strong>Email :  </strong> 
+              <p><%= mail_to owner_email(@order), "#{owner_email(@order)}"%></p>
+              <strong>Téléphone :  </strong> 
+              <p><%= owner_email(@order) %></p>
+              <strong>Adresse :  </strong> 
+              <p><%= owner_address(@order) %></p>
+
+
+<% elsif ordertype(@order) == "Demande" and @order.status == "refusé" %>
+                  
+                  <!-- ////////// statut de commande confirmé
+  
+
+                Si j'ai une commande de type location
+                  - Je vois le status en confirmé
+                  - je vois les infos de contact du owner
+                  
+                Si j'ai une commande de type Demande
+                  - Je vois le status confirmé
+                  - Je vois les infos de contact du user
+                    -->
+
+                <p>Tu as refusé la demande de <%= customer(@order) %></p>
+                
+
+
+
+
+               <% elsif ordertype(@order) == "Location" and @order.status == "refusé" %>
+                            
+              
+
+              <p>Cette demande a été refusée par <%= owner(@order) %> ; </p>
+    
 
 
 
