@@ -41,22 +41,37 @@ ActiveRecord::Schema.define(version: 2018_12_12_153304) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "title"
+    t.string "img_url"
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.decimal "price"
-    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "category_id"
+    t.string "image_url"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "line_items", force: :cascade do |t|
     t.bigint "cart_id"
     t.bigint "item_id"
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
@@ -93,11 +108,13 @@ ActiveRecord::Schema.define(version: 2018_12_12_153304) do
     t.boolean "superadmin_role", default: false
     t.boolean "user_role", default: true
     t.string "username"
-    t.integer "type"
     t.string "first_name"
     t.string "last_name"
     t.text "about"
     t.string "img_cin_url"
+    t.string "user_type"
+    t.string "address"
+    t.integer "postal_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
