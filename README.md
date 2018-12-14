@@ -1,4 +1,5 @@
 # Pixeloo
+Plateforme d'échange de matériel photo
 
 ###### Lien du site :
 
