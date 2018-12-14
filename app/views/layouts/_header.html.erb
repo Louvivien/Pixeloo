@@ -7,12 +7,12 @@
     <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <% if user_signed_in? %>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="nav-search-bar" type="text" placeholder="Que recherches-tu ?">
-                    <button class="nav-bar-submit" type="submit">
-                        <%= image_tag("search.png", :class => "nav-submit-logo")%>
-                    </button>
-                </form>
+            <%= form_tag(items_path, method: :get, class:'form-inline my-2 my-lg-0') do %>
+                <%= text_field_tag :search, params[:search], class: 'nav-search-bar', placeholder: 'Que recherches-tu ?' %>
+                <button class="nav-bar-submit" type="submit">
+                    <%= image_tag("search.png" , :class => "nav-submit-logo")%>
+                </button>
+            <% end %>
                 <li>     
                     <%= link_to "🛒", carts_path, :class => "nav-link" %>
                 </li>
