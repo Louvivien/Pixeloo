@@ -135,6 +135,7 @@ Si j'ai une commande de type Demande
                     -->
 
                 <p>Nous t'invitons à contacter <%= customer(@order) %></p>
+                <p>il a également reçu tes coordonnées et va te contacter</p>
                 <strong>Email :  </strong> 
                 <p><%= mail_to @order.email, "#{@order.email}"%></p>
                 <strong>Téléphone :  </strong> 
@@ -151,7 +152,7 @@ Si j'ai une commande de type Demande
 
               <p>Nous t'invitons à contacter <%= owner(@order) %> ; </p>
 
-              <p>il a également reçu tes coordonées et va te contacter</p>
+              <p>il a également reçu tes coordonnées et va te contacter</p>
 
               <strong>Email :  </strong> 
               <p><%= mail_to owner_email(@order), "#{owner_email(@order)}"%></p>
