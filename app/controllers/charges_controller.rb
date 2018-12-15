@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+ include OrderInfo
 
 def new
 	end
@@ -22,6 +23,17 @@ def create
 
 @order = Order.find_by id: params[:order_id]
 confirmedorder = @order.update(status: "confirmé")
+
+@owner_email = owner_email(@order)
+@item = order_item1(@order)
+@owner = owner(@order)
+@customer = customer(@order)
+@owner_email = owner_email(@order)
+
+OrderMailer.confirme_o(@item, @owner_email, @order, @owner).deliver_now  
+ OrderMailer.confirme_c(@item, @order.email, @order, @customer).deliver_now 
+
+
 redirect_to edit_order_validation_path(@order)
 
 

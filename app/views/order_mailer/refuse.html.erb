@@ -1,0 +1,6 @@
+<h1>Bonjour <%= @customer %> </h1>
+
+<p>Ta location de <%= @item.title %> viens d'être refusée par le propriétaire du matériel, viens voir sur Pixeloo afin d'en savoir plus</p>
+<p>
+
+<%= link_to "Voir la demande", edit_order_validation_url(@order) %>

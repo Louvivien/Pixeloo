@@ -75,5 +75,15 @@ module OrderValidationsHelper
     return @owner_address
   end
 
+  def order_item(order)
+      @currentlineitem = LineItem.find_by cart_id: order.cart_id
+          @firstlineitem_id = @currentlineitem.item_id
+          @firstitem = Item.find_by id: @firstlineitem_id
+          @firstitem_title = @firstitem.title
+      return @firstitem_title 
+  end
+
+
+  
 
 end

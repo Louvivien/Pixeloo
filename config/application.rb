@@ -12,6 +12,12 @@ module Pixeloo
 
     config.load_defaults 5.2
 
+    config.action_mailer.default_url_options = {
+
+    	host: 'https://pixeloosave.herokuapp.com'
+
+
+    }
 
     
 

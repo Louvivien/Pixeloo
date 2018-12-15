@@ -1,4 +1,6 @@
 class OrderValidationsController < ApplicationController
+   include OrderInfo
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :redirect_if_cart_is_empty, only: :new
@@ -42,6 +44,7 @@ class OrderValidationsController < ApplicationController
   def create
     @order = Order.new(order_params)
       @order.cart = @cart
+      OrderMailer.demandelocation(Order.first).deliver_now
 
 
     respond_to do |format|
@@ -59,6 +62,18 @@ class OrderValidationsController < ApplicationController
   # PATCH/PUT /order_validations/1
   # PATCH/PUT /order_validations/1.json
   def update
+
+    @customer = customer(@order)
+    @item = order_item1(@order)
+
+    if params[:order][:status] == "accepté"
+    OrderMailer.accepte(@item, @order.email, @order, @customer).deliver_now  
+    elsif params[:order][:status] == "refusé"
+    OrderMailer.refuse(@item, @order.email, @order, @customer).deliver_now  
+    else
+      puts 'Statut en attente'
+    end
+
     respond_to do |format|
       if @order.update(order_params)
         format.html { redirect_to order_validations_path, notice: 'Le statut de votre demande a été mis à jour' }

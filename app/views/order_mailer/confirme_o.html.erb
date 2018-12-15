@@ -1,0 +1,9 @@
+<h1>Bonjour <%= @owner %> </h1>
+
+<p>Ta demande de location de  <%= @item.title%>  viens d'être confirmée, tu peux maintenant entrer en contact avec le locataire du matériel</p>
+<p>
+
+<%= link_to "Voir la demande", edit_order_validation_url(@order) %>
+
+
+

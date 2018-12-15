@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+ include OrderInfo
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :redirect_if_cart_is_empty, only: :new
@@ -42,7 +44,11 @@ class OrdersController < ApplicationController
     @order.user_id = current_user.id
     @order.cart = @cart
     @owner_id = @cartowner_id
-    @order.update!(:owner_id=> @owner_id, :order_price=> @order_price)   
+    @order.update!(:owner_id=> @owner_id, :order_price=> @order_price) 
+    @owner_email = owner_email(@order)
+    @item = order_item1(@order)
+    @owner = owner(@order)
+    OrderMailer.demandelocation(@item, @owner_email, @order, @owner).deliver_now  
     @order.save
     
 
@@ -61,6 +67,8 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
+     
+
     respond_to do |format|
       if @order.update(order_params)
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
@@ -69,6 +77,7 @@ class OrdersController < ApplicationController
         format.html { render :edit }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
