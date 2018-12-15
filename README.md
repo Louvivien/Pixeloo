@@ -17,8 +17,18 @@ http://pixeloosave.herokuapp.com
 5. Bob et Sophie recoivent un email qui les informe que la commande est confirmée et que leurs coordonées respectives sont disponibles sur Pixeloo
 
 
+###### Scénario de test :
+
+1. Créer un utilisateur avec un email valide et ajouter un appareil photo
+2. Créer un second utilisateur avec un email valider et louer cet appareil photo
+
+
 ###### Carte de crédit de test :
 
 - 4242 4242 4242 4242
 - a three-digit CVC
 - any expiry date in the future
+
+
+
+
