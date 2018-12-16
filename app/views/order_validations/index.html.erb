@@ -1,32 +1,18 @@
 <div class="form-container">
-  <p id="notice"><%= notice %></p>
+  <p class="alert alert-success" id="notice"><%= notice %></p>
 
   <p class="devise-title">Voici l'état de vos commandes</p>
-
   <p>Ici vous pouvez voir vos demandes de location et les suivre facilement</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Type de commande</th>
-        <th>Commande</th>
-        <th>Status commande</th>
-        <th>Panier</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="row">
       <% @orders.each do |order| %>
-        <tr>
-          <td><%= ordertype(order) %></td>
-          <td><%= order.id %></td>
-          <td><%= order.status %></td>
-          <td><%= order.cart %></td>
-          
-
-
-          <td>
+          <div class="col-lg-4 col-md-8 col-xs-12">
+            Commande :
+              <b><%= order.id %></b> <br>
+            Type de commande :
+              <b><%= ordertype(order) %></b> <br>
+            Status commande :
+              <b><%= order.status %></b> <br>
 
             <% if ordertype(order) == "Location" and order.status == "accepté" %>
             <%= link_to 'Voir les détails', order_validation_path(order), :method => :get %>
@@ -34,12 +20,9 @@
             <%= link_to 'Voir les détails', edit_order_validation_path(order), :method => :get %>
             <% end %>
 
-          </td>
-
-
-          <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+            <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <br><br>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+  </div>
 </div>
