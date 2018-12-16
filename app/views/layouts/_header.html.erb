@@ -8,9 +8,11 @@
         <ul class="navbar-nav">
             <% if user_signed_in? %>
             <%= form_tag(catalogues_path, method: :get) do %>
-                <%= text_field_tag :search, params[:search], class: 'main-search-bar', placeholder: 'Que recherches-tu ?' %>
-                <button class="search-bar-submit" type="submit">
-                <%= image_tag("search.png")%>
+                <%= text_field_tag :search, params[:search], class: 'nav-search-bar', placeholder: 'Que recherches-tu ?' %>
+                <button class="nav-bar-submit" type="submit">
+                    <div class="nav-submit-logo">
+                        <%= image_tag("search.png")%>
+                    </div>
                 </button>
             <% end %>
                 <li>     
