@@ -1,5 +1,5 @@
 class CataloguesController < ApplicationController
-    skip_before_action :authenticate_user!, :only => [:index]
+    skip_before_action :authenticate_user!, :only => [:show]
 
     def show
       
