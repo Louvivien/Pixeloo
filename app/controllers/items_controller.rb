@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, :only => [:show]
+    before_action :city, only: [:create]
+
 
   # GET /items
   # GET /items.json
@@ -45,6 +47,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user = current_user
+    @item.city = @city
 
 
     respond_to do |format|
@@ -91,7 +94,14 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:title, :description, :price, :image_url, :item_image)
+      params.require(:item).permit(:title, :description, :price, :address, :item_image, :latitude, :longitude)
     end
+
+    def city 
+    results = Geocoder.search(params[:item][:address])
+    @city = results.first.city
+    end
+
+
 
 end

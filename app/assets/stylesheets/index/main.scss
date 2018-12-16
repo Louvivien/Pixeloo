@@ -15,6 +15,28 @@ main {
 	margin: 1% 0 5% 0;
 }
 
+
+.search-bar-location {
+	margin: 0 0 10% 0;
+	padding: 0 65px 0 20px;
+	transition: 0.2s;
+	height: 50px;
+	width: 200px;
+	font-size: 24px;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1);
+}
+
+.search-bar-location:hover {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+.search-bar-location:focus {
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.25);
+}
+
+
 .main-search-bar {
 	margin: 0 0 10% 0;
 	padding: 0 65px 0 20px;

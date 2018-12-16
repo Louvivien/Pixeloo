@@ -4,12 +4,15 @@
             <p class="item-show-title"><%= @item.title %></p>
             <p class="item-show-price"><%= @item.price %> € / jour</p>
             <p class="item-show-description"><%= @item.description %></p>
+             <% if @item.city.present? %>
+                           <p><%= @item.city %></p> 
+                        <% end %>  
             <br><br>
             <%= button_to "Ajouter au panier", line_items_path(item_id: @item), class: "item-show-panier-btn" %>
             <br>
         </div>
         <div align="center" class="col-lg-6">
-            
+         
         <% if @item.item_image.attached? %>
             <%= image_tag(@item.item_image, :class => "img-fluid item-show-img" ) %> 
         <% else  %> 

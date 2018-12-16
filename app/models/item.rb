@@ -6,6 +6,9 @@ class Item < ApplicationRecord
   has_one_attached :item_image
   has_and_belongs_to_many :orders
 
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
+
   validates :title, presence: {
     message: "Le titre doit être renseigné."
   }
@@ -18,9 +21,11 @@ class Item < ApplicationRecord
     message: "Le prix doit être renseigné."
   }
 
-  validates :image_url, presence: {
-    message: "L'image doit être renseigné."
+  validates :address, presence: {
+    message: "L'addresse' doit être renseignée."
   }
+
+
 
   def set_user!(user)
     self.user_id = user.id
