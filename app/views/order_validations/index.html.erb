@@ -3,26 +3,32 @@
 
   <p class="devise-title">Voici l'état de vos commandes</p>
   <p>Ici vous pouvez voir vos demandes de location et les suivre facilement</p>
+  <br><br>
 
-  <div class="row">
-      <% @orders.each do |order| %>
-          <div class="col-lg-4 col-md-8 col-xs-12">
-            Commande :
-              <b><%= order.id %></b> <br>
-            Type de commande :
-              <b><%= ordertype(order) %></b> <br>
-            Status commande :
-              <b><%= order.status %></b> <br>
+  
+    <div class="row">
+        <% @orders.each do |order| %>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+              <div class="order-validations-card">
+              <center><b>Commande n°<%= order.id %></b></center>
+              <br>
+              Type de commande :
+                <b><%= ordertype(order) %></b> <br>
+              Status commande :
+                <b><%= order.status %></b> <br><br>
 
-            <% if ordertype(order) == "Location" and order.status == "accepté" %>
-            <%= link_to 'Voir les détails', order_validation_path(order), :method => :get %>
-            <% else %>
-            <%= link_to 'Voir les détails', edit_order_validation_path(order), :method => :get %>
-            <% end %>
+              <center>
+              <% if ordertype(order) == "Location" and order.status == "accepté" %>
+              <%= link_to 'Voir les détails', order_validation_path(order), :method => :get %>
+              <% else %>
+              <%= link_to 'Voir les détails', edit_order_validation_path(order), :method => :get %>
+              <% end %>
 
-            <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </center>
+            </div>
             <br><br>
-        </div>
-      <% end %>
-  </div>
+          </div>
+        <% end %>
+    </div>
 </div>
