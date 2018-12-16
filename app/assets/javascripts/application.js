@@ -15,3 +15,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery2
+//= require jquery_ujs
+
+$('.main-search-bar').typeahead([
+    {
+      prefetch: 'localhost:3000/suggestions.json'
+     }
+  ]);
