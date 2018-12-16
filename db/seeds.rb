@@ -8,8 +8,6 @@
 
 a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postulatus vel hoc rumore multatione aut multatione beluae honoratorum fovisse suos modum bonorum catenarum rumore militarium aut insimulatus enim iniecto iniecto."
 
-user = User.create!(email: "wesh@commentsava.fr", password: "azerty")
-
 1.times do |item|
 
 items = Item.create!(title: "canon eos-5d", description: a, price: "40€", user_id: "1", category_id: "1", image_url: "wesh")
