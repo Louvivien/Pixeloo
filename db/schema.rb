@@ -48,15 +48,23 @@ ActiveRecord::Schema.define(version: 2018_12_16_112438) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "title"
+    t.string "img_url"
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.decimal "price"
-    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "category_id"
+    t.string "image_url"
     t.string "address"
     t.float "latitude"
     t.float "longitude"
@@ -104,11 +112,13 @@ ActiveRecord::Schema.define(version: 2018_12_16_112438) do
     t.boolean "superadmin_role", default: false
     t.boolean "user_role", default: true
     t.string "username"
-    t.integer "type"
     t.string "first_name"
     t.string "last_name"
     t.text "about"
     t.string "img_cin_url"
+    t.string "user_type"
+    t.string "address"
+    t.integer "postal_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
