@@ -74,3 +74,5 @@ gem 'toastr-rails'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '~> 1.3'
 gem 'cancancan'
+
+gem 'geocoder'

@@ -3,11 +3,19 @@
         <div class="col-lg-6">
         <p class="title">PIXELOO</p>
         <h1 class="brand-description">Plus que de la photo, partage ton expérience</h1>
-        <%= form_tag(catalogues_path, method: :get) do %>
+        <%= form_tag(catalogues_path, method: :get) do %>        
+
+
             <%= text_field_tag :search, params[:search], class: 'main-search-bar', placeholder: 'Que recherches-tu ?' %>
+
+
             <button class="search-bar-submit" type="submit">
+
+
             <%= image_tag("search.png")%>
+
             </button>
+            <%= select_tag 'location', options_for_select(['Paris', 'Marseille'], :selected => 'Paris'), class: "search-bar-location" %>
         <% end %>
         </div>
         <div align="center" class="col-lg-6">
