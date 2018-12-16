@@ -25,6 +25,10 @@ class Item < ApplicationRecord
     message: "L'addresse' doit être renseignée."
   }
 
+  validates :item_image, presence: {
+    message: "Merci d'uploader une image du matériel"
+  }
+
 
 
   def set_user!(user)

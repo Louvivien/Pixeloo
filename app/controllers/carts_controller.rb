@@ -33,7 +33,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
 
     respond_to do |format|
       if @cart.save
-        format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
+        format.html { redirect_to @cart }
         format.json { render :show, status: :created, location: @cart }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
   def update
     respond_to do |format|
       if @cart.update(cart_params)
-        format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
+        format.html { redirect_to @cart }
         format.json { render :show, status: :ok, location: @cart }
       else
         format.html { render :edit }
@@ -74,7 +74,7 @@ private
 
 
     def cart_not_found
-      redirect_to root_url, alert: t(".cart_not_found")
+      redirect_to root_url
     end
 
        # Use callbacks to share common setup or constraints between actions.

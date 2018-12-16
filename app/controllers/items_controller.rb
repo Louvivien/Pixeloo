@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+   before_action :check_profile, only: [:new]
   skip_before_action :authenticate_user!, :only => [:show]
     before_action :city, only: [:create]
 
@@ -25,8 +26,7 @@ class ItemsController < ApplicationController
   def show
 
 
-     puts "Heyy Item show"
-        @item = Item.find(params[:id])
+     
 
   end
 
@@ -52,7 +52,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to @item, notice: 'Le matériel a été ajouté !' }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new }
@@ -66,7 +66,7 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to @item, notice: 'Le matériel a été mis à jour' }
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
@@ -81,7 +81,7 @@ class ItemsController < ApplicationController
     @item.destroy
     @item.item_image.purge
     respond_to do |format|
-      format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
+      format.html { redirect_to items_url, notice: 'Le matériel a été supprimé' }
       format.json { head :no_content }
     end
   end
@@ -90,6 +90,7 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
+      @owner = User.find(@item.user_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -102,6 +103,13 @@ class ItemsController < ApplicationController
     @city = results.first.city
     end
 
+    def check_profile 
+      if current_user.first_name == nil or current_user.last_name == nil or current_user.phone == nil or current_user.address == nil or current_user.description == nil
+        flash[:warning] = "Afin d'ajouter du matériel, complète ton profile"
+        redirect_to edit_user_registration_path
+      end
+    end
 
+    
 
 end

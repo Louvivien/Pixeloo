@@ -55,7 +55,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         session.delete(:cart_id)
-        format.html { redirect_to order_validations_path, notice: "Commande envoyée" }
+        format.html { redirect_to order_validations_path}
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -71,7 +71,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to @order, notice: 'La commande a été mise à jour' }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit }
@@ -86,7 +86,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to orders_url, notice: 'La commande a été supprimée' }
       format.json { head :no_content }
     end
   end

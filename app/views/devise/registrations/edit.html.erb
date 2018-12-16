@@ -5,62 +5,157 @@
     <div class="row">
         <div class="col-lg-6">
             <p class="devise-title">Modifie tes infos</p>
+                
+
+              <div class="form-group">
+                    <div class = "row">
+                        <div class = "col-sm-4">
+                         <%= image_tag user_avatar(resource, 100), class: "rounded-circle" %>
+                        </div>
+
+                        <div class = "col-sm-8">
+                        <%= f.file_field :avatar %>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class="form-group">
                   <div class="field">
                     <%= f.email_field :email, autocomplete: "email", :class => "form-control", :placeholder => "Email" %>
                   </div>
                 </div>
+
+
                 <div class="form-group">
                   <div class="field">
-                    <%= f.password_field :current_password, autocomplete: "current-password", :class => "form-control", :placeholder => "Mot de passe actuel" %>
+                    <%= f.password_field :current_password, :class => "form-control", :placeholder => "Mot de passe actuel" %>
+                     <p class="form-text text-muted"><small>&nbsp&nbsp Saisi ton mot de passe actuel afin de pouvoir modifier tes infos</small></p>
                   </div>
                 </div>
 
                 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-                <% end %>
+                <% end %>                
+                 
+
+                  
+
+
                 <div class="form-group">
                     <div class="field">
                       <%= f.password_field :password, autocomplete: "new-password", :class => "form-control", :placeholder => "Nouveau mot de passe (6 caractères minimum)" %>
-                      <% if @minimum_password_length %>
+                        <% if @minimum_password_length %>
                       <% end %>
+                      <p class="form-text text-muted"><small>&nbsp&nbsp Laisse ce champs vide si tu ne veux pas changer ton mot de passe</small></p>
                     </div>
                 </div>
+
 
                 <div class="form-group">
                   <div class="field">
                     <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "form-control", :placeholder => "Confirmation mot de passe" %>
+                     <p class="form-text text-muted"><small>&nbsp&nbsp Laisse ce champs vide si tu ne veux pas changer ton mot de passe</small></p>
                   </div>
                 </div>
 
+
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.text_field :username, autocomplete: "username", :class => "form-control", :placeholder => "Nom d'utilisateur" %>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.text_field :first_name, autocomplete: "first_name", :class => "form-control", :placeholder => "Prénom" %>
+                  </div>
+                </div>              
+                
+
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.text_field :last_name, autocomplete: "last_name", :class => "form-control", :placeholder => "Nom" %>
+                  </div>
+                </div>
+
+                 <div class="form-group">
+                  <div class="field">
+                    <%= f.text_area :description, autocomplete: "description", :class => "form-control", :placeholder => "Ecris ici une courte présentation de ton profil (100 caractères minimum)" %>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.text_field :phone, autocomplete: "phone", :class => "form-control", :placeholder => "Téléphone" %>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.text_field :address, autocomplete: "address", :class => "form-control", :placeholder => "Adresse" %>
+                  </div>
+                </div>
+
+
                 <center>
-                    <div class="actions">
                         <%= f.submit "Mettre à jour", :class => "devise-btn" %>
-                    </div>
                 </center>
+
                 <br>
               <% end %>
           </div>
 
+
+                
+
+                
+
+               
+
+                
+
+
           <br><br>
+
+      <div class="row">
           <div class="col-lg-6">
               <p class="devise-title">Supprime ton compte</p>
+             
               <center>
                   <%= button_to "Supprimer", registration_path(resource_name), data: { confirm: "Es-tu sûr ? Tu vas nous manquer" }, method: :delete, :class => "devise-btn" %>
               </center>
-              <br>
+
+                  <br>
           </div>
-    </div>
 
-    <br>
-    <hr>
-    <br><br>
-    
-    <center>
-      <p class="devise-title">Propose du matériel à la location</p>
-      <%= button_to "Ajouter", new_item_path, method: :get, :class => "devise-btn" %>
 
-      <%= link_to "Voir la liste de mes locations", order_validations_path %><br>
-      <%= link_to "Voir la liste de mon matériel", items_path %>
-    </center>
+
+   
+
+      <br>
+      <hr>
+      <br><br>
+      
+      <div class="row">
+          <div class="col-lg-6">
+            
+              <p class="devise-title">Propose du matériel à la location</p>
+                            <center>
+
+              <%= button_to "Ajouter", new_item_path, method: :get, :class => "devise-btn" %>
+                            <center>
+
+
+              <%= link_to "Voir la liste de mes locations", order_validations_path %><br>
+              <%= link_to "Voir la liste de mon matériel", items_path %>
+            
+          </div>
+      </div>
+
+
 </div>

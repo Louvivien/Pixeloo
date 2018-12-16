@@ -23,6 +23,12 @@ module OrderValidationsHelper
 		return @owner_name
 	end
 
+  def owner0(order)
+      owner_id = order.owner_id
+      owner = User.find_by id: owner_id   
+      return owner
+  end
+
 	def customer(order)
   		customer_id = order.user_id
   		customer = User.find_by id: customer_id		
@@ -37,6 +43,12 @@ module OrderValidationsHelper
   		  			end 
 		return @customer_name
 	end
+
+  def customer0(order)
+      customer_id = order.user_id
+      customer = User.find_by id: customer_id   
+      return customer
+  end
 
   def owner_email(order)
       owner_id = order.owner_id
@@ -81,6 +93,15 @@ module OrderValidationsHelper
           @firstitem = Item.find_by id: @firstlineitem_id
           @firstitem_title = @firstitem.title
       return @firstitem_title 
+  end
+
+
+  def order_item_image(order)
+      @currentlineitem = LineItem.find_by cart_id: order.cart_id
+          @firstlineitem_id = @currentlineitem.item_id
+          @firstitem = Item.find_by id: @firstlineitem_id
+          @firstitem_image = @firstitem.item_image
+      return @firstitem_image
   end
 
 

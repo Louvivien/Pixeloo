@@ -11,7 +11,6 @@ class OrderValidationsController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    order_validation = ""
 
     if current_user.superadmin_role? 
     @orders = Order.all.order(:id)
@@ -50,7 +49,7 @@ class OrderValidationsController < ApplicationController
     respond_to do |format|
       if @order.save
         session.delete(:cart_id)
-        format.html { redirect_to order_validations_path, notice: "Commande envoyée" }
+        format.html { redirect_to order_validations_path}
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -67,16 +66,16 @@ class OrderValidationsController < ApplicationController
     @item = order_item1(@order)
 
     if params[:order][:status] == "accepté"
-    OrderMailer.accepte(@item, @order.email, @order, @customer).deliver_now  
+    OrderMailer.accepte(@item, @order.email, @order, @customer).deliver_now
+    flash[:notice] = "La demande de location a été acceptée"  
     elsif params[:order][:status] == "refusé"
     OrderMailer.refuse(@item, @order.email, @order, @customer).deliver_now  
-    else
-      puts 'Statut en attente'
-    end
+    "La demande de location a été refusée"
+       end
 
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to order_validations_path, notice: 'Le statut de votre demande a été mis à jour' }
+        format.html { redirect_to order_validations_path}
         format.json { render :index, status: :ok, location: order_validations_path}
       else
         format.html { render :edit }
@@ -90,7 +89,7 @@ class OrderValidationsController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to orders_url, notice: 'La demande a été supprimée' }
       format.json { head :no_content }
     end
   end

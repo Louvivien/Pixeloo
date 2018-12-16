@@ -47,10 +47,14 @@
 
    <div class="form-group">
      <strong>Utilisateur:</strong>
-        <% if ordertype(@order) == "Demande"%>
+         <% if ordertype(@order) == "Demande"%>
                 <%= customer(@order) %>
+                <%=  image_tag user_avatar(customer0(@order), size=100)%> <br><br>
+                <%=  customer0(@order).description%> 
         <% else %>  
                 <%= owner(@order) %>
+                 <%=  image_tag user_avatar(owner0(@order), size=100)%> <br><br>
+                <%=  owner0(@order).description%>
         <% end %> 
   </div>
 
@@ -71,10 +75,7 @@
   <%= @order.start_date %>
   </div>
 
-    <div class="form-group">
-     <strong>Description du projet:</strong>
-  <%= @order.description %>
-  </div>
+   
 
     <div class="form-group">
      <strong>Prix total de la location:</strong>
@@ -131,8 +132,7 @@ Si j'ai une commande de type Demande
 <script>
       var handler = StripeCheckout.configure({
         key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-        image: '/assets/camera.png',
-        token: function(token, args) {
+                token: function(token, args) {
           document.getElementById("stripeToken").value = token.id;
   document.getElementById("stripeEmail").value = token.email;
   document.getElementById("chargeForm").submit();

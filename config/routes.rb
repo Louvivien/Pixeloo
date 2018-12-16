@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   resources :carts
   root 'home#index'
-  devise_for :users
+  devise_for :users 
   resources :items
   put '/statusupdate', to: 'order_validations#update'
   resources :order_validations

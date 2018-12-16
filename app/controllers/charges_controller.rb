@@ -33,13 +33,13 @@ confirmedorder = @order.update(status: "confirmé")
 OrderMailer.confirme_o(@item, @owner_email, @order, @owner).deliver_now  
  OrderMailer.confirme_c(@item, @order.email, @order, @customer).deliver_now 
 
-
+flash[:notice] = "Le paiement a été effectué"
 redirect_to edit_order_validation_path(@order)
 
 
 
 rescue Stripe::CardError => e
-  flash[:error] = e.message
+  flash[:notice] = "Le paiement n'a pas réussi, nous t'invitons à recommencer"
   redirect_to show_order_validation_path(@order)
 end
 

@@ -30,15 +30,13 @@
     <div class="row">
         <div class="col-lg-4">
             <div class="owner-card-container">
-                <%= image_tag("xavier-niel.jpg", :alt => "item" , :class => "img-fluid owner-card-img")%>
-                <p class="owner-card-name">Xavier</p>
+                <%= image_tag user_avatar(@owner, 300), class: "img-fluid owner-card-img" %>
+                <p class="owner-card-name"><%=@owner.first_name%></p>
             </div>
         </div>
         <div class="col-lg-8">
-            <p>Bonjour je m'appelle Xavier,<br><br>
-            Je suis un passionné de photograpghie depuis ma plus tendre enfance.<br>
-            J'aime les paysages argentin et je mets en location mon <%= @item.title %><br>
-            pour arrondir mes fins de mois.</p>
+            <p>Bonjour je m'appelle <%=@owner.first_name%>,<br><br>
+            <%=@owner.description%> Je mets en location mon <%= @item.title %> qui est un super appareil. A bientôt !</p>
         </div>
     </div>
 </div>

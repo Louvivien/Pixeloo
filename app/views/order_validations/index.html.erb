@@ -1,5 +1,4 @@
 <div class="form-container">
-  <p class="alert alert-success" id="notice"><%= notice %></p>
 
   <p class="devise-title">Voici l'état de vos commandes</p>
   <p>Ici vous pouvez voir vos demandes de location et les suivre facilement</p>
@@ -12,6 +11,7 @@
               <div class="order-validations-card">
               <center><b>Commande n°<%= order.id %></b></center>
               <br>
+              <center><b><%=image_tag order_item_image(order).variant(resize: "100x100")%></b></center> <br>
               Type de commande :
                 <b><%= ordertype(order) %></b> <br>
               Status commande :
