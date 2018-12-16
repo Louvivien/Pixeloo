@@ -8,7 +8,6 @@
 
 a = "In partes multatione vel militarium fovisse fovisse damnabatur suos postulatus vel hoc rumore multatione aut multatione beluae honoratorum fovisse suos modum bonorum catenarum rumore militarium aut insimulatus enim iniecto iniecto."
 
-user = User.create!(email: "wesh10@commentsava.fr", password: "azerty")
 
 1.times do |item|
 
