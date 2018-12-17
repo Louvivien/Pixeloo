@@ -6,7 +6,7 @@ Plateforme d'échange de matériel photo
 http://pixeloosave.herokuapp.com
 
 ###### Mode de fonctionnement :
-1 - Bob ajoute son nouvel appareil photo Canon sur Pixeloo
+1 - Bob ajoute son nouvel appareil photo Canon sur Pixeloo ici : https://pixeloosave.herokuapp.com/users/edit (bas de page)
 
 2. Sophie veut louer le Canon de Bob, elle l'ajoute à son panier et passe la commande
 
