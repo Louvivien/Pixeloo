@@ -100,7 +100,7 @@ Comporte les fonctionalités de base d'un site e-commerce. A savoir de manière 
 
 - @Enes, le Yankee, notre désormais pro du seed et modèle photo à ses heures perdues ;)
 - @Alexi, Alias l'Eclaireur est notre spécialiste du front.
-- @Vivien, le Cerveau, sans qui nous n'aurions pas survécu ses 2 semaines.
+- @Vivien, le Cerveau, sans qui nous n'aurions pas survécu ces 2 semaines.
 - @Rado, alias le Sage, celui qui a l'idée de ce projet.
 
 ## Pour le futur
