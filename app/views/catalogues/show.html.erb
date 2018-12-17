@@ -1,9 +1,15 @@
-<strong><p> Résultat de la recherche de '<%=@search%>' à proximité de <%=@location%> </p></strong>
+<strong><p> Résultat de la recherche de '<%=@search%>' 
+
+    <% if@location.present?%>
+    <%= "à proximité de #{@location}"%></p>
+    <% end %>
+</strong>
+
 <hr>
-    <a href="#" class="brand-btn">Nikon</a>
-    <a href="#" class="brand-btn">Leica</a>
-    <a href="#" class="brand-btn">Canon</a>
-    <a href="#" class="brand-btn">Panasonic</a>
+    <%= link_to "Nikon", catalogues_path(:search => 'Nikon', :location => @location), class: "brand-btn" %>
+    <%= link_to "Leica", catalogues_path(:search => 'Leica', :location => @location), class: "brand-btn" %>
+    <%= link_to "Canon", catalogues_path(:search => 'Canon', :location => @location), class: "brand-btn" %>
+    <%= link_to "Panasonic", catalogues_path(:search => 'Panasonic', :location => @location), class: "brand-btn" %>
 <hr>
 
 <center>
@@ -12,8 +18,10 @@
             <% @items.each do |item| %> 
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="item-card-container">
-                        <% if item.city.present? %>
+                        <% if item.city.present? and @location.present?%>
                            <p><%= number_with_precision(item.distance * 1.609344, :precision => 1)%> km du centre de <%=@location%></p> 
+                           <% else %>
+                                <p><%= item.city %></p>
                         <% end %>
 
 

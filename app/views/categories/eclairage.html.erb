@@ -1,9 +1,9 @@
 <p class="category-title">ECLAIRAGE</p>
 <hr>
-    <a href="#" class="brand-btn">Nikon</a>
-    <a href="#" class="brand-btn">Leica</a>
-    <a href="#" class="brand-btn">Canon</a>
-    <a href="#" class="brand-btn">Panasonic</a>
+    <%= link_to "Nikon", catalogues_path(:search => 'Nikon', :location => @location), class: "brand-btn" %>
+    <%= link_to "Leica", catalogues_path(:search => 'Leica', :location => @location), class: "brand-btn" %>
+    <%= link_to "Canon", catalogues_path(:search => 'Canon', :location => @location), class: "brand-btn" %>
+    <%= link_to "Panasonic", catalogues_path(:search => 'Panasonic', :location => @location), class: "brand-btn" %>
 <hr>
 
 <center>
