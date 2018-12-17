@@ -29,7 +29,7 @@ items = Item.create!(title: "canon eos-650", description: a, price: "35€", use
 items = Item.create!(title: "lumix DC-GH5EF", description: a, price: "35€", user_id: "1", category_id: "1", address: '3 rue de Lisbonne 75008 PARIS', city: "Paris")
  items.item_image.attach(io: File.open('app/assets/images/boitier1/lumix DC-GH5EF.png'), filename: 'lumix DC-GH5EF.png', content_type: 'image/png')
 
-items = Item.create!(title: "lumix DC-GH5LEF", description: a, price: "30€", user_id: "1", category_id: "1", address: '132 rue Paradis, 13006 Marseille', city: "Paris")
+items = Item.create!(title: "lumix DC-GH5LEF", description: a, price: "30€", user_id: "1", category_id: "1", address: '132 rue Paradis, 13006 Marseille', city: "Marseille")
  items.item_image.attach(io: File.open('app/assets/images/boitier1/lumix DC-GH5LEF.png'), filename: 'lumix DC-GH5LEF.png', content_type: 'image/png')
 
 items = Item.create!(title: "lumix DC-GH5SE", description: a, price: "30€", user_id: "1", category_id: "1", address: '10 rue de Lisbonne 75008 PARIS', city: "Paris")
@@ -56,7 +56,7 @@ items = Item.create!(title: "sigma-17-70mm-f28-4-dc-macro-os-hsm", description: 
 items = Item.create!(title: "sigma-18-35mm-f18-dc-hsm", description: a, price: "2€", user_id: "1", category_id: "3", address: '120 rue Ordener 75018 PARIS', city: "Paris")
  items.item_image.attach(io: File.open('app/assets/images/objectifs2/location-objectif-sigma-18-35mm-f18-dc-hsm.jpg'), filename: 'location-objectif-sigma-18-35mm-f18-dc-hsm.jpg', content_type: 'image/jpg')
 
-items = Item.create!(title: "sigma-35mm-f14-dg-hsm", description: a, price: "15€", user_id: "1", category_id: "3", address: '121 rue Paradis, 13006 Marseille', city: "Paris")
+items = Item.create!(title: "sigma-35mm-f14-dg-hsm", description: a, price: "15€", user_id: "1", category_id: "3", address: '121 rue Paradis, 13006 Marseille', city: "Marseille")
  items.item_image.attach(io: File.open('app/assets/images/objectifs2/sigma-35mm-f14-dg-hsm.jpg'), filename: 'sigma-35mm-f14-dg-hsm.jpg', content_type: 'image/jpg')
 
 items = Item.create!(title: "canon-ef-50mm-f12-l-usm", description: a, price: "30€", user_id: "1", category_id: "3", address: '48 rue St Andre des arts 75006 PARIS', city: "Paris")
@@ -86,7 +86,7 @@ items = Item.create!(title: "aputure-ls-mini-20d-148", description: a, price: "4
 items = Item.create!(title: "Fresnel-HMI-4000w-Arri-D40", description: a, price: "15€", user_id: "1", category_id: "2", address: '33 bvd de picpus 75012 PARIS', city: "Paris")
  items.item_image.attach(io: File.open('app/assets/images/éclairage3/Fresnel-HMI-4000w-Arri-D40.png'), filename: 'Fresnel-HMI-4000w-Arri-D40.png', content_type: 'image/png')
 
-items = Item.create!(title: "idv-f50-fresnel-7ab", description: a, price: "35€", user_id: "1", category_id: "2", address: '140 rue Paradis, 13006 Marseille', city: "Paris")
+items = Item.create!(title: "idv-f50-fresnel-7ab", description: a, price: "35€", user_id: "1", category_id: "2", address: '140 rue Paradis, 13006 Marseille', city: "Marseille")
  items.item_image.attach(io: File.open('app/assets/images/éclairage3/idv-f50-fresnel-led-ultra-compact-7ab.jpg'), filename: 'idv-f50-fresnel-led-ultra-compact-7ab.jpg', content_type: 'image/jpg')
 
 items = Item.create!(title: "skylite-900fd-5600k-940", description: a, price: "20€", user_id: "1", category_id: "2", address: '23 bis rue Bichat 75010 PARIS', city: "Paris")
