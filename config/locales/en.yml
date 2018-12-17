@@ -63,9 +63,7 @@
 en:
   hello: "Hello world"
 
- errors:
-    messages:
-      blank: "ne peut pas être vide"
+
 
 
 
