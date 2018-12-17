@@ -6,6 +6,7 @@ class Order < ApplicationRecord
   validates :email, presence: true
    validates :owner_id, presence: true
   validates :status, inclusion: statuses.keys
+	validates :start_date, presence: true
 
 
 end
