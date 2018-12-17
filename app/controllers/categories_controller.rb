@@ -14,9 +14,21 @@ class CategoriesController < ApplicationController
   def edit
   end
 
-  def show
-    @items = Item.all.order(:id)
+  def reflex
+    items = Item.all.order(:id)
+    @items =items.all.where(category_id: 1)
   end
+
+  def eclairage
+    items = Item.all.order(:id)
+    @items =items.all.where(category_id: 2)
+  end
+
+  def objectifs
+    items = Item.all.order(:id)
+    @items =items.all.where(category_id: 3)
+  end
+
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_item

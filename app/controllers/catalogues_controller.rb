@@ -4,6 +4,7 @@ class CataloguesController < ApplicationController
     def show
       
       @location = params[:location]
+      @search = params[:search]
 
     if params[:search]
         search = params[:search]

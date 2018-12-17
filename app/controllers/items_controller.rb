@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
    before_action :check_profile, only: [:new]
+   before_action :category_id, only: [:create]
   skip_before_action :authenticate_user!, :only => [:show]
     before_action :city, only: [:create]
 
@@ -48,6 +49,9 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     @item.city = @city
+    @item.category_id = @category_id
+    
+    
 
 
     respond_to do |format|
@@ -95,7 +99,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:title, :description, :price, :address, :item_image, :latitude, :longitude)
+      params.require(:item).permit(:title, :description, :price, :address, :item_image, :latitude, :longitude, :category, :category_id)
     end
 
     def city 
@@ -103,13 +107,23 @@ class ItemsController < ApplicationController
     @city = results.first.city
     end
 
+    def category_id 
+      category = params[:category]
+      if category == 'Reflex'
+        @category_id = 1
+      elsif category == 'Eclairage'
+        @category_id = 2
+      elsif category == 'Objectifs'
+        @category_id = 3
+      end
+        return @category_id
+    end
+
     def check_profile 
       if current_user.first_name == nil or current_user.last_name == nil or current_user.phone == nil or current_user.address == nil or current_user.description == nil
         flash[:warning] = "Afin d'ajouter du matériel, complète ton profile"
         redirect_to edit_user_registration_path
       end
-    end
-
-    
+    end    
 
 end

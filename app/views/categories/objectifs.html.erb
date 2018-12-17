@@ -1,4 +1,4 @@
-<strong><p> Résultat de la recherche de '<%=@search%>' à proximité de <%=@location%> </p></strong>
+<p class="category-title">OBJECTIFS</p>
 <hr>
     <a href="#" class="brand-btn">Nikon</a>
     <a href="#" class="brand-btn">Leica</a>
@@ -12,10 +12,10 @@
             <% @items.each do |item| %> 
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="item-card-container">
-                        <% if item.city.present? %>
-                           <p><%= number_with_precision(item.distance * 1.609344, :precision => 1)%> km du centre de <%=@location%></p> 
+                         <% if item.city.present? %>
+                           <p><%= item.city %></p> 
                         <% end %>
-
+                        
 
                         <% if item.item_image.attached? %>
                                 <%= link_to image_tag(item.item_image, width: "50", :alt => "pixeloo" , :class => "img-fluid item-img"),item %>

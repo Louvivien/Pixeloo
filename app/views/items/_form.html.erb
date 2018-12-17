@@ -19,6 +19,16 @@
 
   <div class="field">
       <div class="form-group">
+
+          <p>Catégorie</p>
+          <%= select_tag 'category', options_for_select(['Reflex', 'Objectifs', 'Eclairage']), class: "form-control", id: "exampleFormControlSelect1" %>
+
+
+      </div>
+  </div>
+
+  <div class="field">
+      <div class="form-group">
           <%= form.text_area :description, :placeholder => "Description", :class => "form-control" %>
       </div>
   </div>
