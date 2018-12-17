@@ -6,7 +6,7 @@ Plateforme d'échange de matériel photo
 http://pixeloosave.herokuapp.com
 
 ###### Mode de fonctionnement :
-1 - Bob ajoute son nouvel appareil photo Canon sur Pixeloo
+1 - Bob ajoute son nouvel appareil photo Canon sur Pixeloo ici : https://pixeloosave.herokuapp.com/users/edit (bas de page)
 
 2. Sophie veut louer le Canon de Bob, elle l'ajoute à son panier et passe la commande
 
@@ -28,6 +28,27 @@ http://pixeloosave.herokuapp.com
 - 4242 4242 4242 4242
 - a three-digit CVC
 - any expiry date in the future
+
+###### En cas de difficulté pour cloner et migrer :
+1. décommenter l'initializer stripe
+2. $ EDITOR="subl --wait" bin/rails credentials:edit
+          afin d'ajouter vos credentials pour :
+                aws:
+                  access_key_id: XXXX
+                  secret_access_key: XXX
+
+                stripe:
+                  publishable_key: XXX
+                  secret_key: XX
+
+                gmail:
+                  username: XXX
+                  password: XXXX
+4. compiler 
+     $ RAILS_ENV=production bundle exec rake assets:precompile
+5. rails db:migrate (éventuellement db:reset avant)
+6. rails db:migrate
+7. rails db:seed
 
 ## Le projet
 
@@ -79,7 +100,7 @@ Comporte les fonctionalités de base d'un site e-commerce. A savoir de manière 
 
 - @Enes, le Yankee, notre désormais pro du seed et modèle photo à ses heures perdues ;)
 - @Alexi, Alias l'Eclaireur est notre spécialiste du front.
-- @Vivien, le Cerveau, sans qui nous n'aurions pas survécu ses 2 semaines.
+- @Vivien, le Cerveau, sans qui nous n'aurions pas survécu ces 2 semaines.
 - @Rado, alias le Sage, celui qui a l'idée de ce projet.
 
 ## Pour le futur
