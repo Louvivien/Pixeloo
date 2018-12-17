@@ -29,6 +29,27 @@ http://pixeloosave.herokuapp.com
 - a three-digit CVC
 - any expiry date in the future
 
+###### En cas de difficulté pour cloner et migrer :
+1. décommenter l'initializer stripe
+2. $ EDITOR="subl --wait" bin/rails credentials:edit
+          afin d'ajouter vos credentials pour :
+                aws:
+                  access_key_id: XXXX
+                  secret_access_key: XXX
+
+                stripe:
+                  publishable_key: XXX
+                  secret_key: XX
+
+                gmail:
+                  username: XXX
+                  password: XXXX
+4. compiler 
+     $ RAILS_ENV=production bundle exec rake assets:precompile
+5. rails db:migrate (éventuellement db:reset avant)
+6. rails db:migrate
+7. rails db:seed
+
 ## Le projet
 
 ### Features de base
