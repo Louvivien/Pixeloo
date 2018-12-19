@@ -108,6 +108,6 @@ Comporte les fonctionalités de base d'un site e-commerce. A savoir de manière 
 Nous allons dans un premier temps nous appliquer à améliorer les fonctionnalités existantes. Ensuite nous aurons à terme la possibilité d'apporter des innovations au projet. Si l'étude du modèle économique est positive, pourquoi ne pas envisager la mise sur le marché du produit avec une rémunération à la clef ?!
 
 
-![Image description](https://ibb.co/1GFvDNs)
+![Image description](https://i.ibb.co/MkF2YH8/SNAPSHOT.jpg)
 
 
